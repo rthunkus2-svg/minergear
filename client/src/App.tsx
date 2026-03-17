@@ -8,7 +8,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import MinerDetail from "@/pages/miner-detail";
 import Disclaimer from "@/pages/disclaimer";
-import AffiliateGuide from "@/pages/affiliate-guide";
+import Mining101 from "@/pages/mining-101";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 function AppRouter() {
@@ -17,7 +17,7 @@ function AppRouter() {
       <Route path="/" component={Home} />
       <Route path="/miner/:id" component={MinerDetail} />
       <Route path="/disclaimer" component={Disclaimer} />
-      <Route path="/affiliate-guide" component={AffiliateGuide} />
+      <Route path="/learn" component={Mining101} />
       <Route component={NotFound} />
     </Switch>
   );
