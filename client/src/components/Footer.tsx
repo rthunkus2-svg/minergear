@@ -13,9 +13,9 @@ export default function Footer() {
             </span>
           </Link>
           <span className="text-border">|</span>
-          <Link href="/affiliate-guide">
-            <span className="hover:text-foreground cursor-pointer transition-colors" data-testid="footer-link-affiliate">
-              Affiliate Guide
+          <Link href="/learn">
+            <span className="hover:text-foreground cursor-pointer transition-colors" data-testid="footer-link-learn">
+              Mining 101
             </span>
           </Link>
           <span className="text-border">|</span>
@@ -27,8 +27,7 @@ export default function Footer() {
         </div>
 
         <p className="text-center max-w-lg leading-relaxed">
-          Some links may support this project at no extra cost to you.
-          Prices are approximate — always verify before purchasing. Not financial advice.
+          Prices are approximate and may change — always verify before purchasing. Not financial advice.
         </p>
 
         <PerplexityAttribution />

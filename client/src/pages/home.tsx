@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import { miners, manufacturers, categoryLabels, tierLabels } from "@/data/miners";
+import { minerImages } from "@/data/miner-images";
 import type { Miner } from "@/data/miners";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -64,6 +65,31 @@ function sortMiners(list: Miner[], sortBy: SortOption): Miner[] {
   }
 }
 
+function MinerImage({ minerId, name }: { minerId: string; name: string }) {
+  const src = minerImages[minerId];
+  const [hasError, setHasError] = useState(false);
+
+  if (!src || hasError) {
+    return (
+      <div className="w-24 h-24 md:w-28 md:h-28 rounded-lg bg-muted/50 flex items-center justify-center shrink-0">
+        <Cpu className="h-8 w-8 text-muted-foreground/40" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-24 h-24 md:w-28 md:h-28 rounded-lg bg-white dark:bg-white/10 overflow-hidden shrink-0 flex items-center justify-center p-2">
+      <img
+        src={src}
+        alt={name}
+        className="w-full h-full object-contain"
+        loading="lazy"
+        onError={() => setHasError(true)}
+      />
+    </div>
+  );
+}
+
 export default function Home() {
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("alpha");
@@ -107,10 +133,10 @@ export default function Home() {
         {/* Hero */}
         <section className="px-4 pt-10 pb-8">
           <div className="mx-auto max-w-6xl">
-            <h1 className="text-xl font-bold tracking-tight">
+            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
               Miner<span className="text-primary">Gear</span>
             </h1>
-            <p className="text-muted-foreground text-sm mt-1.5 max-w-xl leading-relaxed">
+            <p className="text-muted-foreground text-base mt-2 max-w-2xl leading-relaxed">
               Find the right power supplies, cooling upgrades, firmware, and accessories for your crypto mining hardware — with real prices and direct purchase links.
             </p>
           </div>
@@ -126,14 +152,14 @@ export default function Home() {
                   placeholder="Search miners (e.g. S21, Avalon Q, Bitaxe)..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="pl-9 h-10"
+                  className="pl-9 h-11 text-base"
                   data-testid="input-search"
                 />
               </div>
               <Button
                 variant={showFilters ? "secondary" : "outline"}
                 size="icon"
-                className="h-10 w-10 shrink-0"
+                className="h-11 w-11 shrink-0"
                 onClick={() => setShowFilters(!showFilters)}
                 data-testid="button-toggle-filters"
               >
@@ -143,12 +169,12 @@ export default function Home() {
 
             {/* Sort */}
             <div className="flex items-center gap-2">
-              <span className="text-xs text-muted-foreground whitespace-nowrap">Sort by:</span>
+              <span className="text-sm text-muted-foreground whitespace-nowrap">Sort by:</span>
               <Select
                 value={sortBy}
                 onValueChange={(v) => setSortBy(v as SortOption)}
               >
-                <SelectTrigger className="h-8 text-xs w-[200px]" data-testid="select-sort">
+                <SelectTrigger className="h-9 text-sm w-[220px]" data-testid="select-sort">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -164,7 +190,7 @@ export default function Home() {
             {showFilters && (
               <div className="space-y-3 p-4 rounded-lg bg-card border border-card-border">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
                     Filters
                   </span>
                   {hasFilters && (
@@ -172,7 +198,7 @@ export default function Home() {
                       variant="ghost"
                       size="sm"
                       onClick={clearFilters}
-                      className="h-7 text-xs gap-1"
+                      className="h-8 text-sm gap-1"
                       data-testid="button-clear-filters"
                     >
                       <X className="h-3 w-3" /> Clear
@@ -181,13 +207,13 @@ export default function Home() {
                 </div>
                 {/* Category */}
                 <div>
-                  <span className="text-xs text-muted-foreground mb-1.5 block">Category</span>
-                  <div className="flex flex-wrap gap-1.5">
+                  <span className="text-sm text-muted-foreground mb-1.5 block">Category</span>
+                  <div className="flex flex-wrap gap-2">
                     {uniqueCategories.map((cat) => (
                       <Badge
                         key={cat}
                         variant={selectedCategory === cat ? "default" : "outline"}
-                        className="cursor-pointer text-xs"
+                        className="cursor-pointer text-sm px-3 py-1"
                         onClick={() =>
                           setSelectedCategory(selectedCategory === cat ? null : cat)
                         }
@@ -200,13 +226,13 @@ export default function Home() {
                 </div>
                 {/* Tier */}
                 <div>
-                  <span className="text-xs text-muted-foreground mb-1.5 block">Tier</span>
-                  <div className="flex flex-wrap gap-1.5">
+                  <span className="text-sm text-muted-foreground mb-1.5 block">Tier</span>
+                  <div className="flex flex-wrap gap-2">
                     {uniqueTiers.map((tier) => (
                       <Badge
                         key={tier}
                         variant={selectedTier === tier ? "default" : "outline"}
-                        className="cursor-pointer text-xs"
+                        className="cursor-pointer text-sm px-3 py-1"
                         onClick={() =>
                           setSelectedTier(selectedTier === tier ? null : tier)
                         }
@@ -219,13 +245,13 @@ export default function Home() {
                 </div>
                 {/* Manufacturer */}
                 <div>
-                  <span className="text-xs text-muted-foreground mb-1.5 block">Manufacturer</span>
-                  <div className="flex flex-wrap gap-1.5">
+                  <span className="text-sm text-muted-foreground mb-1.5 block">Manufacturer</span>
+                  <div className="flex flex-wrap gap-2">
                     {manufacturers.map((mfg) => (
                       <Badge
                         key={mfg}
                         variant={selectedManufacturer === mfg ? "default" : "outline"}
-                        className="cursor-pointer text-xs"
+                        className="cursor-pointer text-sm px-3 py-1"
                         onClick={() =>
                           setSelectedManufacturer(
                             selectedManufacturer === mfg ? null : mfg
@@ -247,71 +273,77 @@ export default function Home() {
         <section className="px-4 pb-8">
           <div className="mx-auto max-w-6xl">
             <div className="flex items-center justify-between mb-4">
-              <span className="text-xs text-muted-foreground">
+              <span className="text-sm text-muted-foreground">
                 {filtered.length} miner{filtered.length !== 1 ? "s" : ""}
               </span>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((miner) => (
                 <Link key={miner.id} href={`/miner/${miner.id}`}>
                   <Card
-                    className="cursor-pointer group transition-colors hover:border-primary/40 h-full"
+                    className="cursor-pointer group transition-all hover:border-primary/40 hover:shadow-md h-full"
                     data-testid={`card-miner-${miner.id}`}
                   >
-                    <CardContent className="p-4 flex flex-col gap-3">
-                      <div className="flex items-start justify-between gap-2">
-                        <div className="min-w-0">
-                          <div className="text-xs text-muted-foreground">
-                            {miner.manufacturer}
+                    <CardContent className="p-4 md:p-5 flex gap-4">
+                      {/* Miner Image */}
+                      <MinerImage minerId={miner.id} name={miner.name} />
+
+                      {/* Info */}
+                      <div className="flex flex-col gap-2.5 min-w-0 flex-1">
+                        <div className="flex items-start justify-between gap-2">
+                          <div className="min-w-0">
+                            <div className="text-xs text-muted-foreground">
+                              {miner.manufacturer}
+                            </div>
+                            <h3 className="font-bold text-base leading-tight mt-0.5">
+                              {miner.name}
+                            </h3>
                           </div>
-                          <h3 className="font-semibold text-sm truncate">
-                            {miner.name}
-                          </h3>
+                          <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1" />
                         </div>
-                        <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1" />
-                      </div>
 
-                      <div className="grid grid-cols-3 gap-2 text-xs">
-                        <div className="flex items-center gap-1.5 text-muted-foreground">
-                          <Cpu className="h-3.5 w-3.5 shrink-0" />
-                          <span className="truncate">{miner.hashrate}</span>
+                        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                          <div className="flex items-center gap-1.5 text-muted-foreground">
+                            <Cpu className="h-3.5 w-3.5 shrink-0" />
+                            <span>{miner.hashrate}</span>
+                          </div>
+                          <div className="flex items-center gap-1.5 text-muted-foreground">
+                            <Zap className="h-3.5 w-3.5 shrink-0" />
+                            <span>{miner.power}</span>
+                          </div>
+                          <div className="flex items-center gap-1.5 text-muted-foreground">
+                            <Gauge className="h-3.5 w-3.5 shrink-0" />
+                            <span>{miner.efficiency}</span>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-1.5 text-muted-foreground">
-                          <Zap className="h-3.5 w-3.5 shrink-0" />
-                          <span className="truncate">{miner.power}</span>
-                        </div>
-                        <div className="flex items-center gap-1.5 text-muted-foreground">
-                          <Gauge className="h-3.5 w-3.5 shrink-0" />
-                          <span className="truncate">{miner.efficiency}</span>
-                        </div>
-                      </div>
 
-                      {/* Price Range */}
-                      <div className="flex items-center gap-1.5 text-xs">
-                        <DollarSign className="h-3.5 w-3.5 text-primary shrink-0" />
-                        <span className="font-medium">{miner.priceRange}</span>
-                      </div>
+                        {/* Price Range */}
+                        <div className="flex items-center gap-1.5 text-sm">
+                          <DollarSign className="h-4 w-4 text-primary shrink-0" />
+                          <span className="font-semibold text-base">{miner.priceRange}</span>
+                        </div>
 
-                      <div className="flex items-center gap-1.5 flex-wrap">
-                        <Badge
-                          variant="secondary"
-                          className="text-[10px] px-1.5 py-0"
-                        >
-                          {tierLabels[miner.tier]}
-                        </Badge>
-                        <Badge
-                          variant="outline"
-                          className="text-[10px] px-1.5 py-0"
-                        >
-                          {miner.algorithm}
-                        </Badge>
-                        <Badge
-                          variant="outline"
-                          className="text-[10px] px-1.5 py-0 text-primary border-primary/30"
-                        >
-                          <Wrench className="h-2.5 w-2.5 mr-0.5" />
-                          {miner.accessories.length} accessories
-                        </Badge>
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <Badge
+                            variant="secondary"
+                            className="text-xs px-2 py-0.5"
+                          >
+                            {tierLabels[miner.tier]}
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="text-xs px-2 py-0.5"
+                          >
+                            {miner.algorithm}
+                          </Badge>
+                          <Badge
+                            variant="outline"
+                            className="text-xs px-2 py-0.5 text-primary border-primary/30"
+                          >
+                            <Wrench className="h-3 w-3 mr-0.5" />
+                            {miner.accessories.length} accessories
+                          </Badge>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -321,14 +353,14 @@ export default function Home() {
 
             {filtered.length === 0 && (
               <div className="text-center py-16 text-muted-foreground">
-                <p className="text-sm">No miners found matching your filters.</p>
+                <p className="text-base">No miners found matching your filters.</p>
                 <Button
                   variant="link"
                   onClick={() => {
                     clearFilters();
                     setSearch("");
                   }}
-                  className="mt-2 text-xs"
+                  className="mt-2 text-sm"
                   data-testid="button-clear-all"
                 >
                   Clear all filters
