@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Select,
   SelectContent,
@@ -21,10 +21,10 @@ import {
   Zap,
   Gauge,
   DollarSign,
-  ChevronRight,
   Filter,
   X,
   Wrench,
+  ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -71,18 +71,18 @@ function MinerImage({ minerId, name }: { minerId: string; name: string }) {
 
   if (!src || hasError) {
     return (
-      <div className="w-24 h-24 md:w-28 md:h-28 rounded-lg bg-muted/50 flex items-center justify-center shrink-0">
-        <Cpu className="h-8 w-8 text-muted-foreground/40" />
+      <div className="w-full aspect-[4/3] rounded-t-lg bg-gradient-to-b from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center">
+        <Cpu className="h-12 w-12 text-muted-foreground/30" />
       </div>
     );
   }
 
   return (
-    <div className="w-24 h-24 md:w-28 md:h-28 rounded-lg bg-white dark:bg-white/10 overflow-hidden shrink-0 flex items-center justify-center p-2">
+    <div className="w-full aspect-[4/3] rounded-t-lg bg-gradient-to-b from-slate-100 to-slate-50 dark:from-slate-800/80 dark:to-slate-900/60 overflow-hidden flex items-center justify-center p-6">
       <img
         src={src}
         alt={name}
-        className="w-full h-full object-contain"
+        className="w-full h-full object-contain drop-shadow-md"
         loading="lazy"
         onError={() => setHasError(true)}
       />
@@ -131,60 +131,57 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="px-4 pt-10 pb-8">
-          <div className="mx-auto max-w-6xl">
-            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
-              Miner<span className="text-primary">Gear</span>
+        <section className="px-4 pt-10 pb-6">
+          <div className="mx-auto max-w-7xl">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+              Mining <span className="text-primary">Hardware</span>
             </h1>
-            <p className="text-muted-foreground text-base mt-2 max-w-2xl leading-relaxed">
-              Find the right power supplies, cooling upgrades, firmware, and accessories for your crypto mining hardware — with real prices and direct purchase links.
+            <p className="text-muted-foreground text-base md:text-lg mt-2 max-w-3xl leading-relaxed">
+              Compare ASIC miners with the right power supplies, cooling, firmware, and accessories — real prices and direct purchase links.
             </p>
           </div>
         </section>
 
         {/* Search, Sort & Filters */}
         <section className="px-4 pb-6">
-          <div className="mx-auto max-w-6xl space-y-3">
-            <div className="flex gap-2">
-              <div className="relative flex-1">
+          <div className="mx-auto max-w-7xl space-y-3">
+            <div className="flex gap-2 items-center">
+              <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
-                  placeholder="Search miners (e.g. S21, Avalon Q, Bitaxe)..."
+                  placeholder="Search miners..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   className="pl-9 h-11 text-base"
                   data-testid="input-search"
                 />
               </div>
-              <Button
-                variant={showFilters ? "secondary" : "outline"}
-                size="icon"
-                className="h-11 w-11 shrink-0"
-                onClick={() => setShowFilters(!showFilters)}
-                data-testid="button-toggle-filters"
-              >
-                <Filter className="h-4 w-4" />
-              </Button>
-            </div>
-
-            {/* Sort */}
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground whitespace-nowrap">Sort by:</span>
-              <Select
-                value={sortBy}
-                onValueChange={(v) => setSortBy(v as SortOption)}
-              >
-                <SelectTrigger className="h-9 text-sm w-[220px]" data-testid="select-sort">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {Object.entries(sortLabels).map(([key, label]) => (
-                    <SelectItem key={key} value={key} data-testid={`sort-option-${key}`}>
-                      {label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <div className="flex items-center gap-2">
+                <Select
+                  value={sortBy}
+                  onValueChange={(v) => setSortBy(v as SortOption)}
+                >
+                  <SelectTrigger className="h-11 text-sm w-[200px]" data-testid="select-sort">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {Object.entries(sortLabels).map(([key, label]) => (
+                      <SelectItem key={key} value={key} data-testid={`sort-option-${key}`}>
+                        {label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Button
+                  variant={showFilters ? "secondary" : "outline"}
+                  size="icon"
+                  className="h-11 w-11 shrink-0"
+                  onClick={() => setShowFilters(!showFilters)}
+                  data-testid="button-toggle-filters"
+                >
+                  <Filter className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
 
             {showFilters && (
@@ -270,82 +267,87 @@ export default function Home() {
         </section>
 
         {/* Miner Grid */}
-        <section className="px-4 pb-8">
-          <div className="mx-auto max-w-6xl">
-            <div className="flex items-center justify-between mb-4">
+        <section className="px-4 pb-12">
+          <div className="mx-auto max-w-7xl">
+            <div className="flex items-center justify-between mb-5">
               <span className="text-sm text-muted-foreground">
                 {filtered.length} miner{filtered.length !== 1 ? "s" : ""}
               </span>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {filtered.map((miner) => (
                 <Link key={miner.id} href={`/miner/${miner.id}`}>
                   <Card
-                    className="cursor-pointer group transition-all hover:border-primary/40 hover:shadow-md h-full"
+                    className="cursor-pointer group transition-all hover:border-primary/40 hover:shadow-lg hover:-translate-y-0.5 h-full overflow-hidden"
                     data-testid={`card-miner-${miner.id}`}
                   >
-                    <CardContent className="p-4 md:p-5 flex gap-4">
-                      {/* Miner Image */}
-                      <MinerImage minerId={miner.id} name={miner.name} />
+                    {/* Large Image Area */}
+                    <MinerImage minerId={miner.id} name={miner.name} />
 
-                      {/* Info */}
-                      <div className="flex flex-col gap-2.5 min-w-0 flex-1">
-                        <div className="flex items-start justify-between gap-2">
-                          <div className="min-w-0">
-                            <div className="text-xs text-muted-foreground">
-                              {miner.manufacturer}
-                            </div>
-                            <h3 className="font-bold text-base leading-tight mt-0.5">
-                              {miner.name}
-                            </h3>
-                          </div>
-                          <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1" />
+                    {/* Info Area */}
+                    <div className="p-4 space-y-3">
+                      {/* Manufacturer + Name */}
+                      <div>
+                        <div className="text-xs text-muted-foreground uppercase tracking-wide">
+                          {miner.manufacturer}
                         </div>
+                        <h3 className="font-bold text-lg leading-tight mt-0.5 group-hover:text-primary transition-colors">
+                          {miner.name}
+                        </h3>
+                      </div>
 
-                        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                          <div className="flex items-center gap-1.5 text-muted-foreground">
-                            <Cpu className="h-3.5 w-3.5 shrink-0" />
-                            <span>{miner.hashrate}</span>
-                          </div>
-                          <div className="flex items-center gap-1.5 text-muted-foreground">
-                            <Zap className="h-3.5 w-3.5 shrink-0" />
-                            <span>{miner.power}</span>
-                          </div>
-                          <div className="flex items-center gap-1.5 text-muted-foreground">
-                            <Gauge className="h-3.5 w-3.5 shrink-0" />
-                            <span>{miner.efficiency}</span>
-                          </div>
+                      {/* Specs Row */}
+                      <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <Cpu className="h-3.5 w-3.5 shrink-0" />
+                          <span className="whitespace-nowrap">{miner.hashrate}</span>
                         </div>
-
-                        {/* Price Range */}
-                        <div className="flex items-center gap-1.5 text-sm">
-                          <DollarSign className="h-4 w-4 text-primary shrink-0" />
-                          <span className="font-semibold text-base">{miner.priceRange}</span>
+                        <span className="text-border">|</span>
+                        <div className="flex items-center gap-1">
+                          <Zap className="h-3.5 w-3.5 shrink-0" />
+                          <span className="whitespace-nowrap">{miner.power}</span>
                         </div>
-
-                        <div className="flex items-center gap-1.5 flex-wrap">
-                          <Badge
-                            variant="secondary"
-                            className="text-xs px-2 py-0.5"
-                          >
-                            {tierLabels[miner.tier]}
-                          </Badge>
-                          <Badge
-                            variant="outline"
-                            className="text-xs px-2 py-0.5"
-                          >
-                            {miner.algorithm}
-                          </Badge>
-                          <Badge
-                            variant="outline"
-                            className="text-xs px-2 py-0.5 text-primary border-primary/30"
-                          >
-                            <Wrench className="h-3 w-3 mr-0.5" />
-                            {miner.accessories.length} accessories
-                          </Badge>
+                        <span className="text-border">|</span>
+                        <div className="flex items-center gap-1">
+                          <Gauge className="h-3.5 w-3.5 shrink-0" />
+                          <span className="whitespace-nowrap">{miner.efficiency}</span>
                         </div>
                       </div>
-                    </CardContent>
+
+                      {/* Divider */}
+                      <div className="border-t border-border/50" />
+
+                      {/* Price + Badges */}
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-1.5">
+                          <DollarSign className="h-4 w-4 text-primary shrink-0" />
+                          <span className="font-bold text-lg">{miner.priceRange}</span>
+                        </div>
+                        <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                      </div>
+
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <Badge
+                          variant="secondary"
+                          className="text-xs px-2 py-0.5"
+                        >
+                          {tierLabels[miner.tier]}
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="text-xs px-2 py-0.5"
+                        >
+                          {miner.algorithm}
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="text-xs px-2 py-0.5 text-primary border-primary/30"
+                        >
+                          <Wrench className="h-3 w-3 mr-0.5" />
+                          {miner.accessories.length} accessories
+                        </Badge>
+                      </div>
+                    </div>
                   </Card>
                 </Link>
               ))}
