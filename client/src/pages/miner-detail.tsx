@@ -396,8 +396,8 @@ export default function MinerDetail() {
           <div className="mx-auto max-w-6xl">
             <Card>
               <CardContent className="p-5 sm:p-6">
-                <h2 className="text-xl font-bold mb-5 flex items-center gap-2.5">
-                  <ShoppingCart className="h-5 w-5 text-primary" />
+                <h2 className="text-2xl font-bold mb-5 flex items-center gap-2.5">
+                  <ShoppingCart className="h-6 w-6 text-primary" />
                   Where to Buy This Miner
                 </h2>
                 <VendorTable vendors={miner.vendors} />
@@ -409,7 +409,7 @@ export default function MinerDetail() {
         {/* Accessories by Category */}
         <section className="px-4 pb-10">
           <div className="mx-auto max-w-6xl">
-            <h2 className="text-2xl font-bold mb-2">
+            <h2 className="text-3xl font-bold mb-2">
               Accessories & Upgrades
             </h2>
             <p className="text-base text-muted-foreground mb-8">
@@ -425,12 +425,12 @@ export default function MinerDetail() {
                 return (
                   <div key={group.category}>
                     {/* Category Header — Large & Bold */}
-                    <div className={`flex items-center gap-3 mb-5 pb-3 border-b-2 ${catBorder}`}>
-                      <div className={`p-2.5 rounded-lg ${catBg}`}>
-                        <CatIcon className={`h-6 w-6 ${catColor}`} />
+                    <div className={`flex items-center gap-4 mb-6 pb-4 border-b-2 ${catBorder}`}>
+                      <div className={`p-3 rounded-xl ${catBg}`}>
+                        <CatIcon className={`h-8 w-8 ${catColor}`} />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold leading-tight">
+                        <h3 className="text-2xl md:text-3xl font-extrabold leading-tight tracking-tight">
                           {accessoryCategoryLabels[group.category]}
                         </h3>
                         <span className="text-sm text-muted-foreground">
@@ -453,7 +453,7 @@ export default function MinerDetail() {
         {/* Related Miners */}
         <section className="px-4 pb-10">
           <div className="mx-auto max-w-6xl">
-            <h2 className="text-xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4">
               Other {miner.manufacturer} Miners
             </h2>
             <div className="flex gap-2 flex-wrap">

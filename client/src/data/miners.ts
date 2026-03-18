@@ -1577,31 +1577,39 @@ export const legalDisclaimer = {
   sections: [
     {
       heading: "General Disclaimer",
-      content: "MinerGear is an informational resource designed to help cryptocurrency mining enthusiasts research hardware accessories and related products. The information provided on this platform, including product recommendations, pricing, specifications, and setup insights, is for educational and informational purposes only. MinerGear is not a licensed financial advisor, electrician, or product manufacturer.",
+      content: "MinerGear is an informational resource designed to help cryptocurrency mining enthusiasts research hardware accessories and related products. The information provided on this platform, including product recommendations, pricing, specifications, and setup insights, is for educational and informational purposes only. MinerGear is not a licensed financial advisor, electrician, or product manufacturer. By accessing and using this website, you acknowledge that you have read, understood, and agree to be bound by this disclaimer in its entirety.",
     },
     {
       heading: "No Warranty or Guarantee",
-      content: "All product information, specifications, prices, and availability are provided 'as is' without warranty of any kind, express or implied. Prices and availability change frequently and may not reflect the most current data at the time of viewing. MinerGear makes no guarantees about the accuracy, completeness, or reliability of any information displayed.",
+      content: "All product information, specifications, prices, and availability are provided 'as is' and 'as available' without warranty of any kind, express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement. Prices and availability change frequently and may not reflect the most current data at the time of viewing. MinerGear makes no guarantees about the accuracy, completeness, or reliability of any information displayed.",
+    },
+    {
+      heading: "Zero Liability — Use at Your Own Risk",
+      content: "MinerGear, its owner(s), operators, affiliates, and contributors accept ZERO liability for any damages, losses, injuries, or issues of any kind arising from the use of this website or any products, services, or information referenced herein. This includes, without limitation, direct, indirect, incidental, special, consequential, or punitive damages — whether arising from product defects, installation issues, electrical hazards, financial losses, data loss, or any other cause whatsoever. You expressly agree that your use of this site and any purchasing decisions you make based on information found here are entirely at your own risk.",
+    },
+    {
+      heading: "Electrical Safety — CONSULT A LICENSED ELECTRICIAN",
+      content: "Cryptocurrency mining hardware operates at high voltages and amperages that can cause serious electrical shock, fire, property damage, bodily injury, or death if improperly installed or operated. Electrical codes and regulations vary significantly by country, state/province, county, and municipality. BEFORE installing or operating ANY mining equipment, you MUST consult a licensed, qualified electrician familiar with the electrical codes applicable to your specific location. This includes, but is not limited to: the National Electrical Code (NEC) in the United States, the Canadian Electrical Code (CEC) in Canada, IEC standards in Europe, and any applicable local amendments or ordinances. Do NOT rely on information from this website as a substitute for professional electrical assessment and installation. MinerGear is not responsible for any damage, injury, loss, fire, or death resulting from the installation, wiring, use, or operation of mining hardware or accessories. Ensure ALL electrical work is performed by a licensed professional and passes required inspections.",
+    },
+    {
+      heading: "Warranties — Vendor Responsibility Only",
+      content: "MinerGear does NOT sell, manufacture, ship, or handle any products. All products listed on this site are sold by independent third-party vendors. Any and all product warranties, guarantees, return policies, refund policies, and customer support are the sole responsibility of the vendor from which you purchase. MinerGear has no control over and assumes no responsibility for product quality, defects, shipping damage, delivery issues, warranty claims, or any other post-purchase matters. If you experience any issue with a product purchased through a link on this site, you must contact the vendor directly and follow their policies. MinerGear cannot and will not mediate, intervene in, or be held responsible for any disputes between you and any third-party vendor.",
     },
     {
       heading: "Affiliate Disclosure",
       content: "MinerGear participates in affiliate advertising programs, including but not limited to Amazon Associates, Bitcoin Merch, Solo Satoshi, Helium Deploy, Pickaxe, Power Mining, Crypto Miner Bros, and others. When you click on certain product links and make a purchase, MinerGear may earn a small commission at no additional cost to you. These affiliate relationships do not influence our product recommendations or rankings — products are ranked by relevance, quality, and community consensus.",
     },
     {
-      heading: "Electrical Safety Warning",
-      content: "Cryptocurrency mining hardware operates at high voltages and amperages that can cause electrical shock, fire, or property damage if improperly installed. ALWAYS consult a licensed electrician before installing mining equipment, especially units requiring 240V circuits. MinerGear is not responsible for any damage, injury, or loss resulting from the installation, use, or operation of mining hardware or accessories referenced on this platform. Ensure all electrical work complies with your local building codes and NEC (National Electrical Code) requirements.",
-    },
-    {
-      heading: "No Investment Advice",
-      content: "Nothing on MinerGear constitutes investment, financial, tax, or legal advice. Cryptocurrency mining involves significant financial risk, including the possibility of loss. Mining profitability depends on many factors including cryptocurrency prices, network difficulty, electricity costs, hardware efficiency, and regulatory environment — all of which can change rapidly. Always conduct your own research and consult qualified professionals before making purchase decisions.",
+      heading: "No Investment or Financial Advice",
+      content: "Nothing on MinerGear constitutes investment, financial, tax, or legal advice. Cryptocurrency mining involves significant financial risk, including the possibility of total loss. Mining profitability depends on many factors including cryptocurrency prices, network difficulty, electricity costs, hardware efficiency, and the regulatory environment — all of which can change rapidly and without notice. Always conduct your own research and consult qualified professionals before making any purchase or investment decisions.",
     },
     {
       heading: "Third-Party Products & Links",
-      content: "MinerGear links to third-party vendor websites for product purchases. We are not responsible for the products, services, pricing, shipping, warranties, or customer support provided by these third-party vendors. Any disputes regarding purchases made through linked vendors should be resolved directly with the vendor. Product returns, refunds, and warranty claims are subject to each vendor's individual policies.",
+      content: "MinerGear links to third-party vendor websites for product purchases. We have no control over and are not responsible for the products, services, pricing, shipping, availability, warranties, customer support, privacy policies, or business practices of these third-party vendors. The inclusion of any product or vendor link on this site does not constitute an endorsement, recommendation, or guarantee of that vendor or their products. Any transactions you conduct with third-party vendors are solely between you and the vendor.",
     },
     {
-      heading: "Assumption of Risk",
-      content: "By using this platform and acting on any information provided, you acknowledge and accept that you do so at your own risk. You agree that MinerGear, its creators, affiliates, and contributors shall not be held liable for any direct, indirect, incidental, consequential, or punitive damages arising from the use of this platform or any products referenced herein.",
+      heading: "Assumption of Risk & Indemnification",
+      content: "By using this platform and acting on any information provided, you acknowledge and accept that you do so entirely at your own risk. You agree to indemnify, defend, and hold harmless MinerGear, its owner(s), operators, affiliates, and contributors from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorney fees) arising from or related to your use of this website, any purchases made through links on this site, any electrical work or installations you undertake, or any violation of these terms.",
     },
     {
       heading: "Intellectual Property",

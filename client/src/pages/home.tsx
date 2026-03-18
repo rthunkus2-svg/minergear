@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link } from "wouter";
 import { miners, manufacturers, categoryLabels, tierLabels } from "@/data/miners";
 import { minerImages } from "@/data/miner-images";
@@ -25,6 +25,10 @@ import {
   X,
   Wrench,
   ChevronRight,
+  Download,
+  Smartphone,
+  Mail,
+  CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -139,6 +143,13 @@ export default function Home() {
             <p className="text-muted-foreground text-base md:text-lg mt-2 max-w-3xl leading-relaxed">
               Compare ASIC miners with the right power supplies, cooling, firmware, and accessories — real prices and direct purchase links.
             </p>
+          </div>
+        </section>
+
+        {/* Get the App Banner */}
+        <section className="px-4 pb-6">
+          <div className="mx-auto max-w-7xl">
+            <GetTheAppBanner />
           </div>
         </section>
 
@@ -371,8 +382,144 @@ export default function Home() {
             )}
           </div>
         </section>
+
+        {/* Email Subscription */}
+        <section className="px-4 pb-12">
+          <div className="mx-auto max-w-7xl">
+            <EmailSubscription />
+          </div>
+        </section>
       </main>
       <Footer />
+    </div>
+  );
+}
+
+// PWA "Get the App" Banner
+function GetTheAppBanner() {
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [installed, setInstalled] = useState(false);
+
+  useEffect(() => {
+    const handler = (e: any) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+    window.addEventListener("beforeinstallprompt", handler);
+    window.addEventListener("appinstalled", () => setInstalled(true));
+    return () => window.removeEventListener("beforeinstallprompt", handler);
+  }, []);
+
+  const handleInstall = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === "accepted") setInstalled(true);
+      setDeferredPrompt(null);
+    }
+  };
+
+  if (installed) return null;
+
+  return (
+    <div
+      className="rounded-xl border border-primary/20 bg-primary/5 dark:bg-primary/10 p-5 flex flex-col sm:flex-row items-center gap-4"
+      data-testid="banner-get-app"
+    >
+      <div className="flex items-center gap-3 shrink-0">
+        <div className="p-2.5 rounded-lg bg-primary/10">
+          <Smartphone className="h-6 w-6 text-primary" />
+        </div>
+        <div>
+          <h3 className="font-bold text-base">Get the MinerGear App</h3>
+          <p className="text-sm text-muted-foreground">
+            Install on your phone for quick access — works on iOS & Android
+          </p>
+        </div>
+      </div>
+      <div className="sm:ml-auto shrink-0">
+        {deferredPrompt ? (
+          <Button onClick={handleInstall} size="sm" className="gap-1.5" data-testid="button-install-app">
+            <Download className="h-4 w-4" /> Install App
+          </Button>
+        ) : (
+          <div className="text-sm text-muted-foreground text-center sm:text-right">
+            <p className="font-medium">To install:</p>
+            <p>iOS: Tap <span className="font-semibold">Share → Add to Home Screen</span></p>
+            <p>Android: Tap <span className="font-semibold">Menu → Install App</span></p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// Email Subscription Component
+function EmailSubscription() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !email.includes("@")) return;
+    setStatus("submitting");
+    // Store subscription in backend
+    const encoded = encodeURIComponent(email);
+    fetch(`/api/subscribe?email=${encoded}`, { method: "POST" })
+      .then(() => {
+        setStatus("success");
+        setEmail("");
+      })
+      .catch(() => {
+        // Fallback — open mailto link so the subscription isn't lost
+        window.open(`mailto:minergear.io@gmail.com?subject=Subscribe&body=Please add ${email} to the MinerGear newsletter.`);
+        setStatus("success");
+        setEmail("");
+      });
+  };
+
+  return (
+    <div
+      className="rounded-xl border border-border bg-card p-6 sm:p-8 text-center"
+      data-testid="section-email-subscribe"
+    >
+      <Mail className="h-8 w-8 text-primary mx-auto mb-3" />
+      <h2 className="text-2xl font-bold tracking-tight mb-2">
+        Stay in the Loop
+      </h2>
+      <p className="text-muted-foreground text-sm sm:text-base max-w-lg mx-auto mb-5">
+        Get notified about new mining hardware, price drops, firmware updates, and crypto news — delivered to your inbox.
+      </p>
+
+      {status === "success" ? (
+        <div className="flex items-center justify-center gap-2 text-green-600 dark:text-green-400 font-medium">
+          <CheckCircle className="h-5 w-5" />
+          You're subscribed — welcome aboard.
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="flex gap-2 max-w-md mx-auto">
+          <Input
+            type="email"
+            placeholder="your@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="h-11 text-base flex-1"
+            data-testid="input-subscribe-email"
+          />
+          <Button
+            type="submit"
+            disabled={status === "submitting"}
+            className="h-11 px-5 text-sm"
+            data-testid="button-subscribe"
+          >
+            {status === "submitting" ? "Subscribing..." : "Subscribe"}
+          </Button>
+        </form>
+      )}
+      <p className="text-xs text-muted-foreground mt-3">
+        No spam, unsubscribe anytime. We respect your privacy.
+      </p>
     </div>
   );
 }
