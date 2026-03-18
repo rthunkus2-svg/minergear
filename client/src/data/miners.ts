@@ -79,7 +79,7 @@ export const miners: Miner[] = [
       { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-xp-bitcoin-miner-270th-s-bt-miners/", price: "$5,535.00", affiliate: false, inStock: true, notes: "Ships from USA, new unit" },
       { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s21-xp-bitcoin-miner/", price: "$6,299.00", affiliate: false, inStock: true, notes: "Express shipping available" },
       { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21-xp-270", price: "$4,950.00", affiliate: true, inStock: true, notes: "5-10% partner commission, 30-day cookie" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-xp/", price: "$5,999.00", affiliate: true, inStock: true, notes: "Use coupon DEAL80 for $80 off" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-xp/?ref=kcuwuiay", price: "$5,999.00", affiliate: true, inStock: true, notes: "Use coupon DEAL80 for $80 off" },
     ],
     accessories: [
       // POWER
@@ -213,7 +213,7 @@ export const miners: Miner[] = [
       { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-pro-bitcoin-miner-234th-s-bt-miners/", price: "$3,790.00", affiliate: false, inStock: true, notes: "Ships from USA" },
       { store: "Wattum", url: "https://wattum.io/products/new-bitmain-antminer-s21-pro-234t", price: "$5,374.00", affiliate: false, inStock: true, notes: "Ships from USA, new unit" },
       { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21-pro", price: "$3,250.00", affiliate: true, inStock: true, notes: "Best price — 5-10% partner commission, 30-day cookie" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-pro/", price: "$4,499.00", affiliate: true, inStock: true, notes: "Use coupon DEAL80 for $80 off" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-pro/?ref=kcuwuiay", price: "$4,499.00", affiliate: true, inStock: true, notes: "Use coupon DEAL80 for $80 off" },
     ],
     accessories: [
       {
@@ -329,7 +329,7 @@ export const miners: Miner[] = [
     vendors: [
       { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s21-plus-bitcoin-miner/", price: "$2,199.00", affiliate: false, inStock: true, notes: "235 TH/s model" },
       { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-plus-bitcoin-miner-235th-s-bt-miners/", price: "$2,585.00", affiliate: false, inStock: true, notes: "Ships from USA" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-plus/", price: "$2,999.00", affiliate: true, inStock: true, notes: "Coupon DEAL80 for $80 off" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-plus/?ref=kcuwuiay", price: "$2,999.00", affiliate: true, inStock: true, notes: "Coupon DEAL80 for $80 off" },
       { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21-plus", price: "$3,650.00", affiliate: true, inStock: true, notes: "Hyd 358T model — 5-10% partner commission" },
     ],
     accessories: [
@@ -393,7 +393,7 @@ export const miners: Miner[] = [
     priceNum: 1800,
     vendors: [
       { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-bitcoin-miner-200th-s-bt-miners/", price: "$1,850.00", affiliate: false, inStock: true, notes: "Ships from USA" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-200th/", price: "$2,199.00", affiliate: true, inStock: true, notes: "Coupon DEAL80 for $80 off" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-200th/?ref=kcuwuiay", price: "$2,199.00", affiliate: true, inStock: true, notes: "Coupon DEAL80 for $80 off" },
       { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitmain-antminer-s21-200th?aff=876", price: "$2,499.00", affiliate: true, inStock: true, notes: "3.3% affiliate commission" },
     ],
     accessories: [
@@ -668,7 +668,7 @@ export const miners: Miner[] = [
     priceRange: "$1,500 - $1,900",
     priceNum: 1500,
     vendors: [
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/canaan-avalon-q-bitcoin-miner/", price: "$1,499.00", affiliate: true, inStock: true, notes: "Up to 1% affiliate commission" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/canaan-avalon-q-bitcoin-miner/?ref=kcuwuiay", price: "$1,499.00", affiliate: true, inStock: true, notes: "Up to 1% affiliate commission" },
       { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/canaan-avalon-q-bitcoin-miner/", price: "$1,499.00", affiliate: false, inStock: true, notes: "Includes PSU" },
       { store: "Canaan Official", url: "https://shop.canaan.io/products/avalon-q-1", price: "$1,850.24", affiliate: false, inStock: true, notes: "Direct from manufacturer, 2% off" },
       { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/canaan-avalon-q-90th-bitcoin-home-miner/", price: "$1,888.00", affiliate: true, inStock: true, notes: "Affiliate program available" },
@@ -710,7 +710,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Canaan Avalon Q Fan", price: "$15.00 - $20.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-avalon-q/", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Canaan Avalon Q Fan", price: "$15.00 - $20.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-avalon-q/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "Avalon Q Replacement Fan", price: "$18.00 - $25.00", url: "https://www.amazon.com/s?k=avalon+Q+replacement+fan+120mm&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -865,7 +865,7 @@ export const miners: Miner[] = [
     priceNum: 1600,
     vendors: [
       { store: "BT-Miners", url: "https://bt-miners.com/products/microbt-whatsminer-m60s-bitcoin-miner-186th-s-bt-miners/", price: "$1,650.00", affiliate: false, inStock: true, notes: "Ships from USA, authorized dealer" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/microbt-whatsminer-m60s/", price: "$1,999.00", affiliate: true, inStock: true, notes: "Up to 1% affiliate commission" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/microbt-whatsminer-m60s/?ref=kcuwuiay", price: "$1,999.00", affiliate: true, inStock: true, notes: "Up to 1% affiliate commission" },
     ],
     accessories: [
       {
@@ -928,7 +928,7 @@ export const miners: Miner[] = [
     priceNum: 800,
     vendors: [
       { store: "BT-Miners", url: "https://bt-miners.com/products/microbt-whatsminer-m50s-bitcoin-miner-126th-s-bt-miners/", price: "$850.00", affiliate: false, inStock: true, notes: "Budget miner, ships from USA" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/microbt-whatsminer-m50s-126th/", price: "$1,099.00", affiliate: true, inStock: true, notes: "Coupon available" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/microbt-whatsminer-m50s-126th/?ref=kcuwuiay", price: "$1,099.00", affiliate: true, inStock: true, notes: "Coupon available" },
     ],
     accessories: [
       {
@@ -1340,7 +1340,7 @@ export const miners: Miner[] = [
     vendors: [
       { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-l9-litecoin-miner-16000mh-s-bt-miners/", price: "$6,800.00", affiliate: false, inStock: true, notes: "Ships from USA" },
       { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/l9", price: "$4,350.00", affiliate: true, inStock: true, notes: "Best price — 5-10% partner commission, 30-day cookie" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-l9/", price: "$7,499.00", affiliate: true, inStock: true, notes: "Up to 1% commission" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-l9/?ref=kcuwuiay", price: "$7,499.00", affiliate: true, inStock: true, notes: "Up to 1% commission" },
     ],
     accessories: [
       {
@@ -1391,7 +1391,7 @@ export const miners: Miner[] = [
     vendors: [
       { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-l7-litecoin-miner-9500mh-s-bt-miners/", price: "$2,800.00", affiliate: false, inStock: true, notes: "Ships from USA" },
       { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/l7", price: "$1,499.00", affiliate: true, inStock: true, notes: "Best price — 5-10% partner commission, 30-day cookie" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-l7-9500mh/", price: "$3,299.00", affiliate: true, inStock: true, notes: "Coupon available" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-l7-9500mh/?ref=kcuwuiay", price: "$3,299.00", affiliate: true, inStock: true, notes: "Coupon available" },
     ],
     accessories: [
       {
