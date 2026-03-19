@@ -203,7 +203,7 @@ function AccessoryItem({ accessory }: { accessory: Accessory }) {
 
   return (
     <Card className="h-full" data-testid={`card-accessory-${accessory.id}`}>
-      <CardContent className="p-5 space-y-3">
+      <CardContent className="p-5 flex flex-col h-full">
         {/* Header */}
         <div className="flex items-start gap-3">
           <div className={`mt-0.5 ${colorClass}`}>
@@ -228,12 +228,12 @@ function AccessoryItem({ accessory }: { accessory: Accessory }) {
         </div>
 
         {/* Description */}
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <p className="text-sm text-muted-foreground leading-relaxed mt-3">
           {accessory.description}
         </p>
 
         {/* Setup Insight (collapsible) */}
-        <Collapsible open={insightOpen} onOpenChange={setInsightOpen}>
+        <Collapsible open={insightOpen} onOpenChange={setInsightOpen} className="mt-3">
           <CollapsibleTrigger asChild>
             <Button
               variant="ghost"
@@ -256,7 +256,7 @@ function AccessoryItem({ accessory }: { accessory: Accessory }) {
         </Collapsible>
 
         {/* Products */}
-        <div className="space-y-2 pt-1">
+        <div className="space-y-2 pt-1 mt-auto">
           <span className="text-sm font-semibold text-muted-foreground flex items-center gap-1.5">
             <ShoppingCart className="h-4 w-4" /> Where to Buy
           </span>
