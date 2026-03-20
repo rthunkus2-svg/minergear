@@ -9,6 +9,12 @@ import {
   type VendorListing,
 } from "@/data/miners";
 import { minerImages } from "@/data/miner-images";
+import {
+  useLivePrices,
+  mergeVendorPrices,
+  mergeAccessoryPrices,
+  livePriceRange,
+} from "@/hooks/use-live-prices";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -190,12 +196,16 @@ function VendorTable({ vendors }: { vendors: VendorListing[] }) {
   );
 }
 
-function AccessoryItem({ accessory }: { accessory: Accessory }) {
+function AccessoryItem({ accessory, allLivePrices }: { accessory: Accessory; allLivePrices?: Record<string, any[]> }) {
   const [insightOpen, setInsightOpen] = useState(false);
   const Icon = categoryIcons[accessory.category];
   const colorClass = categoryColors[accessory.category];
 
-  const sortedProducts = [...accessory.products].sort((a, b) => {
+  const mergedProducts = allLivePrices
+    ? mergeAccessoryPrices(accessory.products, allLivePrices, accessory.id)
+    : accessory.products;
+
+  const sortedProducts = [...mergedProducts].sort((a, b) => {
     const priceA = parseFloat(a.price.replace(/[^0-9.]/g, "")) || 0;
     const priceB = parseFloat(b.price.replace(/[^0-9.]/g, "")) || 0;
     return priceA - priceB;
@@ -297,6 +307,8 @@ function AccessoryItem({ accessory }: { accessory: Accessory }) {
 export default function MinerDetail() {
   const { id } = useParams<{ id: string }>();
   const miner = useMemo(() => miners.find((m) => m.id === id), [id]);
+  const { data: livePriceData } = useLivePrices();
+  const livePrices = livePriceData?.prices;
 
   if (!miner) {
     return (
@@ -369,7 +381,7 @@ export default function MinerDetail() {
                     {miner.algorithm}
                   </Badge>
                   <Badge variant="outline" className="text-sm px-3 py-1 font-bold">
-                    {miner.priceRange}
+                    {livePriceRange(miner.priceRange, miner.priceNum, livePrices?.[miner.id]).priceRange}
                   </Badge>
                   {essentialCount > 0 && (
                     <Badge variant="outline" className="text-sm px-3 py-1 text-primary border-primary/30">
@@ -400,7 +412,12 @@ export default function MinerDetail() {
                   <ShoppingCart className="h-6 w-6 text-primary" />
                   Where to Buy This Miner
                 </h2>
-                <VendorTable vendors={miner.vendors} />
+                <VendorTable vendors={mergeVendorPrices(miner.vendors, livePrices?.[miner.id])} />
+                {livePriceData?.lastUpdated && (
+                  <p className="text-xs text-muted-foreground mt-3">
+                    Prices last updated: {new Date(livePriceData.lastUpdated).toLocaleString()}
+                  </p>
+                )}
               </CardContent>
             </Card>
           </div>
@@ -440,7 +457,7 @@ export default function MinerDetail() {
                     </div>
                     <div className="grid gap-4 sm:grid-cols-2">
                       {group.items.map((acc) => (
-                        <AccessoryItem key={acc.id} accessory={acc} />
+                        <AccessoryItem key={acc.id} accessory={acc} allLivePrices={livePrices} />
                       ))}
                     </div>
                   </div>

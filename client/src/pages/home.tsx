@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { miners, manufacturers, categoryLabels, tierLabels } from "@/data/miners";
 import { minerImages } from "@/data/miner-images";
 import type { Miner } from "@/data/miners";
+import { useLivePrices, livePriceRange } from "@/hooks/use-live-prices";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
@@ -49,15 +50,20 @@ const sortLabels: Record<SortOption, string> = {
   "efficiency-asc": "Efficiency: Best First",
 };
 
-function sortMiners(list: Miner[], sortBy: SortOption): Miner[] {
+interface MinerWithLivePrice extends Miner {
+  livePriceRange?: string;
+  livePriceNum?: number;
+}
+
+function sortMiners(list: MinerWithLivePrice[], sortBy: SortOption): MinerWithLivePrice[] {
   const sorted = [...list];
   switch (sortBy) {
     case "alpha":
       return sorted.sort((a, b) => a.name.localeCompare(b.name));
     case "price-asc":
-      return sorted.sort((a, b) => a.priceNum - b.priceNum);
+      return sorted.sort((a, b) => (a.livePriceNum ?? a.priceNum) - (b.livePriceNum ?? b.priceNum));
     case "price-desc":
-      return sorted.sort((a, b) => b.priceNum - a.priceNum);
+      return sorted.sort((a, b) => (b.livePriceNum ?? b.priceNum) - (a.livePriceNum ?? a.priceNum));
     case "hashrate-desc":
       return sorted.sort((a, b) => b.hashrateNum - a.hashrateNum);
     case "power-asc":
@@ -101,23 +107,30 @@ export default function Home() {
   const [selectedTier, setSelectedTier] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
+  const { data: livePriceData } = useLivePrices();
 
   const filtered = useMemo(() => {
-    const list = miners.filter((m) => {
-      const q = search.toLowerCase();
-      const matchesSearch =
-        !q ||
-        m.name.toLowerCase().includes(q) ||
-        m.manufacturer.toLowerCase().includes(q) ||
-        m.algorithm.toLowerCase().includes(q) ||
-        m.hashrate.toLowerCase().includes(q);
-      const matchesMfg = !selectedManufacturer || m.manufacturer === selectedManufacturer;
-      const matchesTier = !selectedTier || m.tier === selectedTier;
-      const matchesCategory = !selectedCategory || m.category === selectedCategory;
-      return matchesSearch && matchesMfg && matchesTier && matchesCategory;
-    });
+    const list: MinerWithLivePrice[] = miners
+      .filter((m) => {
+        const q = search.toLowerCase();
+        const matchesSearch =
+          !q ||
+          m.name.toLowerCase().includes(q) ||
+          m.manufacturer.toLowerCase().includes(q) ||
+          m.algorithm.toLowerCase().includes(q) ||
+          m.hashrate.toLowerCase().includes(q);
+        const matchesMfg = !selectedManufacturer || m.manufacturer === selectedManufacturer;
+        const matchesTier = !selectedTier || m.tier === selectedTier;
+        const matchesCategory = !selectedCategory || m.category === selectedCategory;
+        return matchesSearch && matchesMfg && matchesTier && matchesCategory;
+      })
+      .map((m) => {
+        const lp = livePriceData?.prices?.[m.id];
+        const { priceRange, priceNum } = livePriceRange(m.priceRange, m.priceNum, lp);
+        return { ...m, livePriceRange: priceRange, livePriceNum: priceNum };
+      });
     return sortMiners(list, sortBy);
-  }, [search, selectedManufacturer, selectedTier, selectedCategory, sortBy]);
+  }, [search, selectedManufacturer, selectedTier, selectedCategory, sortBy, livePriceData]);
 
   const hasFilters = selectedManufacturer || selectedTier || selectedCategory;
 
@@ -332,7 +345,7 @@ export default function Home() {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-1.5">
                           <DollarSign className="h-4 w-4 text-primary shrink-0" />
-                          <span className="font-bold text-lg">{miner.priceRange}</span>
+                          <span className="font-bold text-lg">{(miner as MinerWithLivePrice).livePriceRange || miner.priceRange}</span>
                         </div>
                         <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                       </div>
