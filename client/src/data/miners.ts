@@ -94,7 +94,7 @@ export const miners: Miner[] = [
         products: [
           { name: "APW17 1215a PSU (New)", price: "$175.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3388", store: "Zeus Mining", affiliate: false, inStock: true },
           { name: "APW17 PSU (New Original)", price: "$449.99", url: "https://eastcoastasic.com/product/bitmain-antminer-power-supply-apw17/", store: "East Coast ASIC", affiliate: false, inStock: true },
-          { name: "APW17 PSU on Amazon", price: "$250.00 - $400.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply+S21+XP&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "APW17 PSU on Amazon", price: "$250.00 - $400.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply+S21+XP&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -106,8 +106,8 @@ export const miners: Miner[] = [
         rank: 2,
         essential: true,
         products: [
-          { name: "C19 to C20 Power Cord 12AWG 6ft", price: "$15.99", url: "https://www.amazon.com/s?k=C19+C20+power+cord+12AWG+6ft&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "NEMA 6-20P to C19 Cable 10AWG", price: "$24.99", url: "https://www.amazon.com/s?k=NEMA+6-20P+to+C19+cable+10AWG&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "C19 to C20 Power Cord 12AWG 6ft", price: "$15.99", url: "https://www.amazon.com/s?k=C19+C20+power+cord+12AWG+6ft&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "NEMA 6-20P to C19 Cable 10AWG", price: "$24.99", url: "https://www.amazon.com/s?k=NEMA+6-20P+to+C19+cable+10AWG&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       // COOLING
@@ -134,7 +134,7 @@ export const miners: Miner[] = [
         essential: false,
         products: [
           { name: "Antminer S21 Replacement Fan", price: "$18.00 - $25.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Cooling-Fan.asp", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "S21/T21 Cooling Fan Set", price: "$35.00 - $45.00", url: "https://www.amazon.com/s?k=antminer+S21+replacement+fan&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "S21/T21 Cooling Fan Set", price: "$35.00 - $45.00", url: "https://www.amazon.com/s?k=antminer+S21+replacement+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       // FIRMWARE
@@ -185,7 +185,7 @@ export const miners: Miner[] = [
         essential: false,
         products: [
           { name: "12-Way Mining PDU 240V", price: "$129.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3836", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "Mining PDU Power Distribution", price: "$149.00 - $200.00", url: "https://www.amazon.com/s?k=mining+PDU+power+distribution+240V&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Mining PDU Power Distribution", price: "$149.00 - $200.00", url: "https://www.amazon.com/s?k=mining+PDU+power+distribution+240V&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
     ],
@@ -227,7 +227,7 @@ export const miners: Miner[] = [
         products: [
           { name: "APW17 1215a PSU (New)", price: "$175.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3388", store: "Zeus Mining", affiliate: false, inStock: true },
           { name: "APW17 PSU (New)", price: "$449.99", url: "https://eastcoastasic.com/product/bitmain-antminer-power-supply-apw17/", store: "East Coast ASIC", affiliate: false, inStock: true },
-          { name: "APW17 PSU on Amazon", price: "$250.00 - $400.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply+S21+Pro&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "APW17 PSU on Amazon", price: "$250.00 - $400.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply+S21+Pro&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -239,8 +239,8 @@ export const miners: Miner[] = [
         rank: 2,
         essential: true,
         products: [
-          { name: "C19 to C20 Power Cord 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+C20+power+cord+12AWG&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "NEMA 6-20P to C19 Cable", price: "$24.99", url: "https://www.amazon.com/s?k=NEMA+6-20P+C19+cable+mining&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "C19 to C20 Power Cord 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+C20+power+cord+12AWG&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "NEMA 6-20P to C19 Cable", price: "$24.99", url: "https://www.amazon.com/s?k=NEMA+6-20P+C19+cable+mining&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -266,7 +266,7 @@ export const miners: Miner[] = [
         essential: false,
         products: [
           { name: "Antminer S21 Replacement Fan", price: "$18.00 - $25.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Cooling-Fan.asp", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "S21 Fan Set on Amazon", price: "$35.00 - $45.00", url: "https://www.amazon.com/s?k=antminer+S21+replacement+fan&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "S21 Fan Set on Amazon", price: "$35.00 - $45.00", url: "https://www.amazon.com/s?k=antminer+S21+replacement+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -303,7 +303,7 @@ export const miners: Miner[] = [
         essential: false,
         products: [
           { name: "12-Way Mining PDU 240V", price: "$129.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3836", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "Mining PDU on Amazon", price: "$149.00 - $200.00", url: "https://www.amazon.com/s?k=mining+PDU+power+distribution+240V&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Mining PDU on Amazon", price: "$149.00 - $200.00", url: "https://www.amazon.com/s?k=mining+PDU+power+distribution+240V&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
     ],
@@ -343,7 +343,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "APW17 PSU (New)", price: "$175.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3388", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "APW17 PSU on Amazon", price: "$250.00 - $400.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "APW17 PSU on Amazon", price: "$250.00 - $400.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -444,7 +444,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "APW17 1215a PSU", price: "$175.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3388", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "APW17 PSU on Amazon", price: "$250.00 - $350.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply+S21&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "APW17 PSU on Amazon", price: "$250.00 - $350.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply+S21&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -544,7 +544,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "APW17 PSU", price: "$175.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3388", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "APW17 PSU on Amazon", price: "$300.00 - $450.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "APW17 PSU on Amazon", price: "$300.00 - $450.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -643,7 +643,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "APW17 PSU", price: "$175.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3388", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "APW12 PSU on Amazon", price: "$120.00 - $180.00", url: "https://www.amazon.com/s?k=bitmain+APW12+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "APW12 PSU on Amazon", price: "$120.00 - $180.00", url: "https://www.amazon.com/s?k=bitmain+APW12+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -743,8 +743,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Engineered Fluids BitCool BC-888", price: "$400.00 - $600.00", url: "https://www.amazon.com/s?k=dielectric+immersion+cooling+fluid+mining&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "3M Novec Immersion Fluid", price: "$500.00 - $800.00", url: "https://www.amazon.com/s?k=3M+Novec+immersion+cooling&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Engineered Fluids BitCool BC-888", price: "$400.00 - $600.00", url: "https://www.amazon.com/s?k=dielectric+immersion+cooling+fluid+mining&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "3M Novec Immersion Fluid", price: "$500.00 - $800.00", url: "https://www.amazon.com/s?k=3M+Novec+immersion+cooling&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -793,7 +793,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: true,
         products: [
-          { name: "Cat6 Ethernet Cable 50ft", price: "$11.99", url: "https://www.amazon.com/s?k=cat6+ethernet+cable+50ft&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Cat6 Ethernet Cable 50ft", price: "$11.99", url: "https://www.amazon.com/s?k=cat6+ethernet+cable+50ft&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
     ],
@@ -866,7 +866,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
-          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -920,7 +920,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "Canaan PSU4100-03 for Avalon Q", price: "$99.00 - $120.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3972", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "Avalon Q PSU Replacement", price: "$110.00 - $150.00", url: "https://www.amazon.com/s?k=Canaan+Avalon+Q+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Avalon Q PSU Replacement", price: "$110.00 - $150.00", url: "https://www.amazon.com/s?k=Canaan+Avalon+Q+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -932,8 +932,8 @@ export const miners: Miner[] = [
         rank: 2,
         essential: true,
         products: [
-          { name: "C19/C20 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+C20+power+cable+12AWG&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "NEMA 5-20P to C19 (110V)", price: "$18.99", url: "https://www.amazon.com/s?k=NEMA+5-20P+C19+power+cord&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "C19/C20 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+C20+power+cable+12AWG&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "NEMA 5-20P to C19 (110V)", price: "$18.99", url: "https://www.amazon.com/s?k=NEMA+5-20P+C19+power+cord&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -946,7 +946,7 @@ export const miners: Miner[] = [
         essential: false,
         products: [
           { name: "Canaan Avalon Q Fan", price: "$15.00 - $20.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-avalon-q/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
-          { name: "Avalon Q Replacement Fan", price: "$18.00 - $25.00", url: "https://www.amazon.com/s?k=avalon+Q+replacement+fan+120mm&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Avalon Q Replacement Fan", price: "$18.00 - $25.00", url: "https://www.amazon.com/s?k=avalon+Q+replacement+fan+120mm&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -958,8 +958,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "TP-Link Kasa Smart Plug (15A)", price: "$14.99", url: "https://www.amazon.com/s?k=TP-Link+Kasa+smart+plug+energy+monitoring+15A&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Emporia Smart Plug (15A)", price: "$17.99", url: "https://www.amazon.com/s?k=emporia+smart+plug+energy+monitoring&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "TP-Link Kasa Smart Plug (15A)", price: "$14.99", url: "https://www.amazon.com/s?k=TP-Link+Kasa+smart+plug+energy+monitoring+15A&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Emporia Smart Plug (15A)", price: "$17.99", url: "https://www.amazon.com/s?k=emporia+smart+plug+energy+monitoring&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -971,8 +971,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Cat6 Ethernet Cable 25ft", price: "$8.99", url: "https://www.amazon.com/s?k=cat6+ethernet+cable+25ft&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "TP-Link Powerline Ethernet Kit", price: "$39.99", url: "https://www.amazon.com/s?k=TP-Link+powerline+ethernet+adapter+kit&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Cat6 Ethernet Cable 25ft", price: "$8.99", url: "https://www.amazon.com/s?k=cat6+ethernet+cable+25ft&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "TP-Link Powerline Ethernet Kit", price: "$39.99", url: "https://www.amazon.com/s?k=TP-Link+powerline+ethernet+adapter+kit&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
     ],
@@ -1020,7 +1020,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "TP-Link Kasa Smart Plug", price: "$14.99", url: "https://www.amazon.com/s?k=TP-Link+Kasa+smart+plug+energy+monitoring&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "TP-Link Kasa Smart Plug", price: "$14.99", url: "https://www.amazon.com/s?k=TP-Link+Kasa+smart+plug+energy+monitoring&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1032,8 +1032,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Cat6 Ethernet Cable 25ft", price: "$8.99", url: "https://www.amazon.com/s?k=cat6+ethernet+cable+25ft&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "TP-Link Powerline Ethernet Kit", price: "$39.99", url: "https://www.amazon.com/s?k=TP-Link+powerline+ethernet+adapter+kit&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Cat6 Ethernet Cable 25ft", price: "$8.99", url: "https://www.amazon.com/s?k=cat6+ethernet+cable+25ft&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "TP-Link Powerline Ethernet Kit", price: "$39.99", url: "https://www.amazon.com/s?k=TP-Link+powerline+ethernet+adapter+kit&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1084,8 +1084,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Anker 65W USB-C Charger", price: "$21.99", url: "https://www.amazon.com/s?k=anker+65W+USB-C+charger&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "UGREEN 65W USB-C PD Adapter", price: "$17.99", url: "https://www.amazon.com/s?k=UGREEN+65W+USB-C+PD+charger&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Anker 65W USB-C Charger", price: "$21.99", url: "https://www.amazon.com/s?k=anker+65W+USB-C+charger&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "UGREEN 65W USB-C PD Adapter", price: "$17.99", url: "https://www.amazon.com/s?k=UGREEN+65W+USB-C+PD+charger&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1097,7 +1097,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Cat6 Ethernet Cable 10ft", price: "$6.99", url: "https://www.amazon.com/s?k=cat6+ethernet+cable+10ft&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Cat6 Ethernet Cable 10ft", price: "$6.99", url: "https://www.amazon.com/s?k=cat6+ethernet+cable+10ft&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1109,8 +1109,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "TP-Link Kasa Smart Plug EP25 (15A)", price: "$14.99", url: "https://www.amazon.com/s?k=TP-Link+Kasa+smart+plug+energy+monitoring+15A&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Emporia Smart Plug with Energy Monitor", price: "$17.99", url: "https://www.amazon.com/s?k=emporia+smart+plug+energy+monitoring&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "TP-Link Kasa Smart Plug EP25 (15A)", price: "$14.99", url: "https://www.amazon.com/s?k=TP-Link+Kasa+smart+plug+energy+monitoring+15A&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Emporia Smart Plug with Energy Monitor", price: "$17.99", url: "https://www.amazon.com/s?k=emporia+smart+plug+energy+monitoring&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1122,7 +1122,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: false,
         products: [
-          { name: "Powered USB-C Hub 100W Multi-Port", price: "$39.99", url: "https://www.amazon.com/s?k=powered+USB-C+hub+100W+multi-port+charging&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Powered USB-C Hub 100W Multi-Port", price: "$39.99", url: "https://www.amazon.com/s?k=powered+USB-C+hub+100W+multi-port+charging&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
     ],
@@ -1163,7 +1163,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "P221B PSU (Official)", price: "$200.00 - $300.00", url: "https://bt-miners.com/products/whatsminer-replacement-power-supply-p221b-psu_17v-21-6v-emc-for-whatsminer-m60-m60s-m30s-m50-m50s-m50s-m50s-m30s-m30s-m31s-etc-air-cooling-miner/", store: "BT-Miners", affiliate: false, inStock: true },
-          { name: "Whatsminer PSU on Amazon", price: "$250.00 - $350.00", url: "https://www.amazon.com/s?k=whatsminer+P221B+PSU+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Whatsminer PSU on Amazon", price: "$250.00 - $350.00", url: "https://www.amazon.com/s?k=whatsminer+P221B+PSU+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1176,7 +1176,7 @@ export const miners: Miner[] = [
         essential: false,
         products: [
           { name: "M60 Series Fan", price: "$25.00 - $40.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Cooling-Fan.asp", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "Whatsminer Fan on Amazon", price: "$35.00 - $50.00", url: "https://www.amazon.com/s?k=whatsminer+M60+replacement+fan&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Whatsminer Fan on Amazon", price: "$35.00 - $50.00", url: "https://www.amazon.com/s?k=whatsminer+M60+replacement+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1201,7 +1201,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
-          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1287,7 +1287,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "WhatsMiner M50S Replacement Fan", price: "$25.00 - $40.00", url: "https://www.amazon.com/s?k=whatsminer+M50+replacement+fan+cooling&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "WhatsMiner M50S Replacement Fan", price: "$25.00 - $40.00", url: "https://www.amazon.com/s?k=whatsminer+M50+replacement+fan+cooling&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
           { name: "P221 Replacement Fan (Zeus Mining)", price: "$20.00 - $35.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Cooling-Fan.asp", store: "Zeus Mining", affiliate: false, inStock: true },
         ],
       },
@@ -1343,7 +1343,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "52Pi Low-Profile Plus Cooler", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler+raspberry+pi+5&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "52Pi Low-Profile Plus Cooler", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler+raspberry+pi+5&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
           { name: "52Pi Cooler (Official Store)", price: "$19.99", url: "https://52pi.com/products/low-profile-plus-cpu-cooler-for-raspberry-pi-5-aluminum-heatsink-with-cooling-fan-for-raspberry-pi-5", store: "52Pi", affiliate: false, inStock: true },
         ],
       },
@@ -1356,7 +1356,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: false,
         products: [
-          { name: "Noctua NF-A6x25 PWM", price: "$15.90", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+PWM+fan&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NF-A6x25 PWM", price: "$15.90", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+PWM+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
           { name: "Noctua NF-A6x25 (Official)", price: "$15.90", url: "https://www.noctua.at/en/products/nf-a6x25-pwm/buy", store: "Noctua", affiliate: false, inStock: true },
         ],
       },
@@ -1382,8 +1382,8 @@ export const miners: Miner[] = [
         rank: 2,
         essential: false,
         products: [
-          { name: "Thermal Grizzly Kryonaut Extreme", price: "$13.99", url: "https://www.amazon.com/s?k=thermal+grizzly+kryonaut+extreme&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Noctua NT-H2 Thermal Paste", price: "$9.95", url: "https://www.amazon.com/s?k=noctua+NT-H2+thermal+paste&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Thermal Grizzly Kryonaut Extreme", price: "$13.99", url: "https://www.amazon.com/s?k=thermal+grizzly+kryonaut+extreme&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NT-H2 Thermal Paste", price: "$9.95", url: "https://www.amazon.com/s?k=noctua+NT-H2+thermal+paste&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1395,8 +1395,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Anker 30W USB-C Charger", price: "$13.99", url: "https://www.amazon.com/s?k=anker+30W+USB-C+charger&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Samsung 45W USB-C Adapter", price: "$19.99", url: "https://www.amazon.com/s?k=samsung+45W+USB-C+power+adapter&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Anker 30W USB-C Charger", price: "$13.99", url: "https://www.amazon.com/s?k=anker+30W+USB-C+charger&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Samsung 45W USB-C Adapter", price: "$19.99", url: "https://www.amazon.com/s?k=samsung+45W+USB-C+power+adapter&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
     ],
@@ -1432,8 +1432,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Samsung 45W USB-C Adapter", price: "$19.99", url: "https://www.amazon.com/s?k=samsung+45W+USB-C+power+adapter&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Anker 45W USB-C Charger", price: "$17.99", url: "https://www.amazon.com/s?k=anker+45W+USB-C+charger&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Samsung 45W USB-C Adapter", price: "$19.99", url: "https://www.amazon.com/s?k=samsung+45W+USB-C+power+adapter&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Anker 45W USB-C Charger", price: "$17.99", url: "https://www.amazon.com/s?k=anker+45W+USB-C+charger&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1445,7 +1445,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "52Pi Low-Profile Plus Cooler", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "52Pi Low-Profile Plus Cooler", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1520,7 +1520,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Anker 65W USB-C Charger", price: "$21.99", url: "https://www.amazon.com/s?k=anker+65W+USB-C+charger&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Anker 65W USB-C Charger", price: "$21.99", url: "https://www.amazon.com/s?k=anker+65W+USB-C+charger&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1532,8 +1532,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "52Pi Low-Profile Plus", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Noctua NF-A6x25", price: "$15.90", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+PWM&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "52Pi Low-Profile Plus", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NF-A6x25", price: "$15.90", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+PWM&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1608,7 +1608,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Anker 65W USB-C Charger", price: "$21.99", url: "https://www.amazon.com/s?k=anker+65W+USB-C+charger&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Anker 65W USB-C Charger", price: "$21.99", url: "https://www.amazon.com/s?k=anker+65W+USB-C+charger&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1620,8 +1620,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "52Pi Low-Profile Plus", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Noctua NF-A6x25", price: "$15.90", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+fan&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "52Pi Low-Profile Plus", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NF-A6x25", price: "$15.90", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1700,8 +1700,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Mean Well 12V 150W PSU", price: "$28.00 - $35.00", url: "https://www.amazon.com/s?k=mean+well+12V+150W+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "12V 10A DC Power Supply", price: "$19.99 - $30.00", url: "https://www.amazon.com/s?k=12V+10A+DC+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Mean Well 12V 150W PSU", price: "$28.00 - $35.00", url: "https://www.amazon.com/s?k=mean+well+12V+150W+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "12V 10A DC Power Supply", price: "$19.99 - $30.00", url: "https://www.amazon.com/s?k=12V+10A+DC+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1713,7 +1713,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Noctua NF-A4x20 PWM (40mm)", price: "$14.95", url: "https://www.amazon.com/s?k=noctua+NF-A4x20+PWM+40mm+fan&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NF-A4x20 PWM (40mm)", price: "$14.95", url: "https://www.amazon.com/s?k=noctua+NF-A4x20+PWM+40mm+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1805,8 +1805,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Mean Well 12V 350W PSU", price: "$45.00 - $60.00", url: "https://www.amazon.com/s?k=mean+well+12V+350W+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Server PSU 12V 300W", price: "$35.00 - $50.00", url: "https://www.amazon.com/s?k=server+power+supply+12V+300W+DC&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Mean Well 12V 350W PSU", price: "$45.00 - $60.00", url: "https://www.amazon.com/s?k=mean+well+12V+350W+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Server PSU 12V 300W", price: "$35.00 - $50.00", url: "https://www.amazon.com/s?k=server+power+supply+12V+300W+DC&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1818,8 +1818,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Noctua NF-A8 PWM (80mm) x2", price: "$16.95 each", url: "https://www.amazon.com/s?k=noctua+NF-A8+PWM+80mm+fan&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Noctua NF-A6x25 x2 (if 60mm)", price: "$15.90 each", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+PWM+fan&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NF-A8 PWM (80mm) x2", price: "$16.95 each", url: "https://www.amazon.com/s?k=noctua+NF-A8+PWM+80mm+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NF-A6x25 x2 (if 60mm)", price: "$15.90 each", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+PWM+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1831,7 +1831,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Copper Heatsink Pack (10pcs)", price: "$8.99", url: "https://www.amazon.com/s?k=copper+heatsink+14mm+ASIC+chip&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Copper Heatsink Pack (10pcs)", price: "$8.99", url: "https://www.amazon.com/s?k=copper+heatsink+14mm+ASIC+chip&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1897,7 +1897,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "APW17 PSU", price: "$175.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3388", store: "Zeus Mining", affiliate: false, inStock: true },
-          { name: "APW17 on Amazon", price: "$250.00 - $400.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "APW17 on Amazon", price: "$250.00 - $400.00", url: "https://www.amazon.com/s?k=bitmain+APW17+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1984,7 +1984,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "APW12 PSU", price: "$100.00 - $150.00", url: "https://www.amazon.com/s?k=bitmain+APW12+power+supply&tag=minergear20-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "APW12 PSU", price: "$100.00 - $150.00", url: "https://www.amazon.com/s?k=bitmain+APW12+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
           { name: "APW12 1215a PSU", price: "$120.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Power-Supply.asp", store: "Zeus Mining", affiliate: false, inStock: true },
         ],
       },
