@@ -12,6 +12,13 @@ All images were downloaded, trimmed, and resized to at most 600px as WebP (quali
 | SealMiner A4 Pro Air | Bitdeer official shop (bitdeer.com/shop/product/P260328000001, alt "SEALMINER A4 Pro Air") | https://file.bitdeer.com/bd-public-prod/shop/202605/8689f35c-6e2e-4409-8f35-7d8d237de018.png |
 | Nerdaxe Gaia | Bitronics store, the maker's shop (bitronics.store/products/nerdaxe-gaia) | https://cdn.shopify.com/s/files/1/1001/0683/0163/files/Group_1877.png |
 | NerdQX | Crypto Miner Bros product listing | https://www.cryptominerbros.com/wp-content/uploads/2026/07/NerdQX.webp |
+| Whatsminer M70S+ (added later on 2026-10-29) | MicroBT official site, whatsminer.com home-page M70S+ banner. The unit is labelled "whatsminer M70S+" on the chassis. The banner crops the bottom of the miner, so the image is bottom-aligned on white. | https://aws-microbt-com-bucket.s3.us-west-2.amazonaws.com/20251209M70S%2Bbannerhome_1765258885531.png |
 
 ## Placeholder
-- **Whatsminer M70S+**: MicroBT's official shop does not list an M70S+. The only vendor photo found, from Crypto Miner Bros, carries the "M70" series label, so it cannot be confirmed as the M70S+. The model keeps the placeholder icon.
+- None. The earlier M70S+ placeholder was replaced with MicroBT's own M70S+ banner render, shown above.
+
+## Spec sources (2026-10-29 fixes)
+- **Whatsminer M70S+**: MicroBT's official product manual (December 2025) lists 244–280 TH/s ±5%, 12.5 J/T ±5%, 3140–3500 W ±10%, AC 220–240 V and air cooling. Manual: https://aws-microbt-com-bucket.s3.us-west-2.amazonaws.com/WhatsMinerM70S%2B_1775811512444.pdf (linked from whatsminer.com > Support > Product Manual).
+- **Bitaxe Gamma Duo 650**: 5V DC through a 5.5×2.1 mm center-positive barrel jack, with at least 6A for stock operation. Never use 12V. Solo Satoshi bundles a 5V 8A 40W supply. Source: https://www.solosatoshi.com/product/bitaxe-duo-bitcoin-solo-miner-650-model/ ("Power input").
+- **Bitaxe GT 801**: 12V DC through an XT30 connector. The official hardware repo uses an XT30PW-M as its power input footprint (github.com/bitaxeorg/BitaxeGT, Supply.kicad_sch) and lists a "12V BAP". The optional supply is 12.4V 10A 124W. Sources: https://www.solosatoshi.com/product/bitaxe-gt-gamma-turbo/ and https://www.solosatoshi.com/product/12-4v-10a-124w-switching-power-supply-with-xt30-connector/
+- **Bitaxe Turbo Touch**: built on the GT 801 platform, 12V DC through XT30, with a 12.4V 10A supply included. Source: https://www.solosatoshi.com/product/bitaxe-touch/

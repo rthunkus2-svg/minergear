@@ -100,11 +100,11 @@ if (existsSync(path.join(dist, "index.html"))) {
     check(existsSync(f), `prerendered page missing for ${m.id}`);
     if (existsSync(f)) {
       const html = readFileSync(f, "utf-8");
-      check(html.includes(`<link rel="canonical" href="https://minergear.io/miner/${m.id}" />`), `${m.id} canonical`);
+      check(html.includes(`<link rel="canonical" href="https://www.minergear.io/miner/${m.id}" />`), `${m.id} canonical`);
       check(html.includes('"@type":"Product"'), `${m.id} Product JSON-LD`);
       check(html.includes(`<title>${m.name}`), `${m.id} title`);
     }
-    check(sitemap.includes(`https://minergear.io/miner/${m.id}</loc>`), `sitemap missing ${m.id}`);
+    check(sitemap.includes(`https://www.minergear.io/miner/${m.id}</loc>`), `sitemap missing ${m.id}`);
   }
   const home = readFileSync(path.join(dist, "index.html"), "utf-8");
   check(home.includes('"@type":"Organization"'), "home Organization JSON-LD");

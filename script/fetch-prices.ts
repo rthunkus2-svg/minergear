@@ -25,7 +25,7 @@ interface Source { platform: Platform; base: string; slug: string }
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 const OUT = resolve(import.meta.dirname, "../client/src/data/live-prices.json");
-const UA = "Mozilla/5.0 (compatible; MinerGearPriceBot/1.0; +https://minergear.io)";
+const UA = "Mozilla/5.0 (compatible; MinerGearPriceBot/1.0; +https://www.minergear.io)";
 
 const WOO_HOSTS: Record<string, string> = {
   "www.cryptominerbros.com": "https://www.cryptominerbros.com",

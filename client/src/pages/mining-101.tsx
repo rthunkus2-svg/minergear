@@ -394,7 +394,7 @@ export default function Mining101() {
                 <div>
                   <p className="font-medium text-foreground text-sm">Power Supply</p>
                   <p className="text-xs">
-                    Small miners like Bitaxe use USB-C. Industrial miners need a proper PSU and
+                    Small miners like the Bitaxe run on a dedicated DC power brick: 5V for the Gamma and Gamma Duo, 12V for the GT, Touch, and NerdQaxe family. Match the voltage exactly. Industrial miners need a proper PSU and
                     typically a 240V circuit. Know your electrical setup before buying.
                   </p>
                 </div>
