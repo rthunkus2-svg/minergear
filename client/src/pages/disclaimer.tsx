@@ -2,11 +2,14 @@ import { Link } from "wouter";
 import { legalDisclaimer } from "@/data/miners";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { usePageMeta } from "@/hooks/use-page-meta";
+import { disclaimerMeta } from "@/lib/seo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Scale } from "lucide-react";
 
 export default function Disclaimer() {
+  usePageMeta(disclaimerMeta);
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />

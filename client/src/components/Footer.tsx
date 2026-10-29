@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { PerplexityAttribution } from "@/components/PerplexityAttribution";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
 
 export default function Footer() {
   return (
@@ -29,6 +30,8 @@ export default function Footer() {
         <p className="text-center max-w-lg leading-relaxed">
           Prices are approximate and may change — always verify before purchasing. Not financial advice.
         </p>
+
+        <AffiliateDisclosure className="text-center max-w-lg" />
 
         <PerplexityAttribution />
       </div>

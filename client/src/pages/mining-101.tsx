@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { usePageMeta } from "@/hooks/use-page-meta";
+import { learnMeta } from "@/lib/seo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -160,6 +162,7 @@ function HighlightBox({ children }: { children: React.ReactNode }) {
 }
 
 export default function Mining101() {
+  usePageMeta(learnMeta);
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />

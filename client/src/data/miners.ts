@@ -904,7 +904,7 @@ export const miners: Miner[] = [
       { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/canaan-avalon-q-bitcoin-miner/?ref=kcuwuiay", price: "$1,499.00", affiliate: true, inStock: true, notes: "Includes PSU" },
       { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/canaan-avalon-q-bitcoin-miner/", price: "$1,499.00", affiliate: false, inStock: true, notes: "Includes PSU" },
       { store: "Zeus Mining", url: "https://www.zeusbtc.com/Asic-Miner/Asic-Miner-Details.asp?ID=3865", price: "$1,699.00", affiliate: false, inStock: true, notes: "Ships globally" },
-      { store: "Canaan Official", url: "https://shop.canaan.io/products/avalon-q-1", price: "$1,850.24", affiliate: false, inStock: true, notes: "Direct from manufacturer, 2% off" },
+      { store: "Canaan Official", url: "https://shop.canaan.io/products/avalon-q-1", price: "$1,850.24", affiliate: false, inStock: true, notes: "Direct from manufacturer" },
     ],
     accessories: [
       {
@@ -2111,7 +2111,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -2187,7 +2187,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -2264,7 +2264,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -2328,7 +2328,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -2392,7 +2392,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -2455,7 +2455,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -2506,7 +2506,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -2627,7 +2627,7 @@ export const miners: Miner[] = [
 ];
 
 // Helper: get unique manufacturers
-export const manufacturers = [...new Set(miners.map(m => m.manufacturer))];
+export const manufacturers = Array.from(new Set(miners.map((m) => m.manufacturer)));
 
 // Helper: category labels
 export const categoryLabels: Record<string, string> = {

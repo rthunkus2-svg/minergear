@@ -6,6 +6,8 @@ import type { Miner } from "@/data/miners";
 import { useLivePrices, livePriceRange } from "@/hooks/use-live-prices";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { usePageMeta } from "@/hooks/use-page-meta";
+import { homeMeta } from "@/lib/seo";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -29,11 +31,11 @@ import {
   Download,
   Smartphone,
   Mail,
-  CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type SortOption =
+  | "newest"
   | "alpha"
   | "price-asc"
   | "price-desc"
@@ -42,6 +44,7 @@ type SortOption =
   | "efficiency-asc";
 
 const sortLabels: Record<SortOption, string> = {
+  newest: "Current Models First",
   alpha: "Alphabetical",
   "price-asc": "Price: Low → High",
   "price-desc": "Price: High → Low",
@@ -58,6 +61,13 @@ interface MinerWithLivePrice extends Miner {
 function sortMiners(list: MinerWithLivePrice[], sortBy: SortOption): MinerWithLivePrice[] {
   const sorted = [...list];
   switch (sortBy) {
+    case "newest":
+      return sorted.sort(
+        (a, b) =>
+          Number(!!a.legacy) - Number(!!b.legacy) ||
+          b.releaseYear - a.releaseYear ||
+          a.name.localeCompare(b.name),
+      );
     case "alpha":
       return sorted.sort((a, b) => a.name.localeCompare(b.name));
     case "price-asc":
@@ -101,8 +111,9 @@ function MinerImage({ minerId, name }: { minerId: string; name: string }) {
 }
 
 export default function Home() {
+  usePageMeta(homeMeta);
   const [search, setSearch] = useState("");
-  const [sortBy, setSortBy] = useState<SortOption>("alpha");
+  const [sortBy, setSortBy] = useState<SortOption>("newest");
   const [selectedManufacturer, setSelectedManufacturer] = useState<string | null>(null);
   const [selectedTier, setSelectedTier] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -126,7 +137,7 @@ export default function Home() {
       })
       .map((m) => {
         const lp = livePriceData?.prices?.[m.id];
-        const { priceRange, priceNum } = livePriceRange(m.priceRange, m.priceNum, lp);
+        const { priceRange, priceNum } = livePriceRange(m.priceRange, m.priceNum, lp, m.vendors);
         return { ...m, livePriceRange: priceRange, livePriceNum: priceNum };
       });
     return sortMiners(list, sortBy);
@@ -351,6 +362,15 @@ export default function Home() {
                       </div>
 
                       <div className="flex items-center gap-1.5 flex-wrap">
+                        {miner.legacy && (
+                          <Badge
+                            variant="outline"
+                            className="text-xs px-2 py-0.5 text-amber-700 border-amber-500/40 dark:text-amber-400"
+                            data-testid={`badge-legacy-${miner.id}`}
+                          >
+                            Legacy
+                          </Badge>
+                        )}
                         <Badge
                           variant="secondary"
                           className="text-xs px-2 py-0.5"
@@ -467,30 +487,9 @@ function GetTheAppBanner() {
   );
 }
 
-// Email Subscription Component
+// Newsletter placeholder — no email service is connected yet, so we do not
+// collect addresses or show a "subscribed" state.
 function EmailSubscription() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email || !email.includes("@")) return;
-    setStatus("submitting");
-    // Store subscription in backend
-    const encoded = encodeURIComponent(email);
-    fetch(`/api/subscribe?email=${encoded}`, { method: "POST" })
-      .then(() => {
-        setStatus("success");
-        setEmail("");
-      })
-      .catch(() => {
-        // Fallback — open mailto link so the subscription isn't lost
-        window.open(`mailto:minergear.io@gmail.com?subject=Subscribe&body=Please add ${email} to the MinerGear newsletter.`);
-        setStatus("success");
-        setEmail("");
-      });
-  };
-
   return (
     <div
       className="rounded-xl border border-border bg-card p-6 sm:p-8 text-center"
@@ -498,40 +497,17 @@ function EmailSubscription() {
     >
       <Mail className="h-8 w-8 text-primary mx-auto mb-3" />
       <h2 className="text-2xl font-bold tracking-tight mb-2">
-        Stay in the Loop
+        Newsletter Coming Soon
       </h2>
-      <p className="text-muted-foreground text-sm sm:text-base max-w-lg mx-auto mb-5">
-        Get notified about new mining hardware, price drops, firmware updates, and crypto news — delivered to your inbox.
+      <p className="text-muted-foreground text-sm sm:text-base max-w-lg mx-auto mb-3">
+        We're working on a newsletter for new mining hardware, price drops, and firmware updates.
+        Until it launches, bookmark MinerGear or install the app — prices are refreshed weekly.
       </p>
-
-      {status === "success" ? (
-        <div className="flex items-center justify-center gap-2 text-green-600 dark:text-green-400 font-medium">
-          <CheckCircle className="h-5 w-5" />
-          You're subscribed — welcome aboard.
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="flex gap-2 max-w-md mx-auto">
-          <Input
-            type="email"
-            placeholder="your@email.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="h-11 text-base flex-1"
-            data-testid="input-subscribe-email"
-          />
-          <Button
-            type="submit"
-            disabled={status === "submitting"}
-            className="h-11 px-5 text-sm"
-            data-testid="button-subscribe"
-          >
-            {status === "submitting" ? "Subscribing..." : "Subscribe"}
-          </Button>
-        </form>
-      )}
-      <p className="text-xs text-muted-foreground mt-3">
-        No spam, unsubscribe anytime. We respect your privacy.
+      <p className="text-xs text-muted-foreground">
+        Questions or tips? Email{" "}
+        <a href="mailto:minergear.io@gmail.com" className="underline hover:text-foreground">
+          minergear.io@gmail.com
+        </a>
       </p>
     </div>
   );
