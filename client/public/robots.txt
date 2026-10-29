@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://minergear.io/sitemap.xml
+Sitemap: https://www.minergear.io/sitemap.xml

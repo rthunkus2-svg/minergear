@@ -32,4 +32,5 @@ export const minerImages: Record<string, string> = {
   "sealminer-a4-pro-air": "/miners/sealminer-a4-pro-air.webp",
   "nerdaxe-gaia": "/miners/nerdaxe-gaia.webp",
   "nerdqx": "/miners/nerdqx.webp",
+  "whatsminer-m70s-plus": "/miners/whatsminer-m70s-plus.webp",
 };

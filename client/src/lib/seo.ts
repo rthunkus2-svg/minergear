@@ -3,7 +3,7 @@
 // Keep imports relative (no "@/" alias) so the build script can load this file.
 import type { Miner } from "../data/miners";
 
-export const SITE_URL = "https://minergear.io";
+export const SITE_URL = "https://www.minergear.io";
 export const SITE_NAME = "MinerGear";
 
 export interface PageMeta {
