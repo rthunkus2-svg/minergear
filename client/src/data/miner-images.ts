@@ -23,4 +23,13 @@ export const minerImages: Record<string, string> = {
   "nerdoctaxe": "/miners/nerdoctaxe.jpg",
   "antminer-l9": "/miners/antminer-l9.jpg",
   "antminer-l7": "/miners/antminer-l7.png",
+  // 2026 models — official manufacturer images where available (sources: docs/image-sources-2026-10.md)
+  "antminer-s23-hyd": "/miners/antminer-s23-hyd.webp",
+  "antminer-s23-xp-hyd": "/miners/antminer-s23-xp-hyd.webp",
+  "antminer-s21e-xp-hyd": "/miners/antminer-s21e-xp-hyd.webp",
+  "avalon-a16": "/miners/avalon-a16.webp",
+  "avalon-a16-xp": "/miners/avalon-a16-xp.webp",
+  "sealminer-a4-pro-air": "/miners/sealminer-a4-pro-air.webp",
+  "nerdaxe-gaia": "/miners/nerdaxe-gaia.webp",
+  "nerdqx": "/miners/nerdqx.webp",
 };
