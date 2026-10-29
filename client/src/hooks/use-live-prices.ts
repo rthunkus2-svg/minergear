@@ -1,6 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import type { VendorListing, Product } from "@/data/miners";
+import livePriceSnapshot from "@/data/live-prices.json";
 
 export interface LivePrice {
   vendor: string;
@@ -19,21 +18,29 @@ export interface LivePriceResponse {
 }
 
 /**
- * Fetch all live prices from the backend (cached server-side for 4 hours).
- * On the client we refetch every 30 minutes but the backend will return
- * the same cached data most of the time.
+ * Vendor prices are refreshed by a weekly GitHub Action
+ * (.github/workflows/refresh-prices.yml -> script/fetch-prices.ts), which
+ * commits client/src/data/live-prices.json. The site is fully static on
+ * Vercel, so there is no /api backend: the snapshot is bundled at build
+ * time. If the snapshot is empty or malformed, pages fall back to the
+ * curated prices in miners.ts with no network calls and no console errors.
  */
-export function useLivePrices() {
-  return useQuery<LivePriceResponse>({
-    queryKey: ["/api/prices"],
-    queryFn: async () => {
-      const res = await apiRequest("GET", "/api/prices");
-      return res.json();
-    },
-    staleTime: 30 * 60 * 1000, // 30 min
-    refetchInterval: 30 * 60 * 1000,
-    retry: 1,
-  });
+function loadSnapshot(): LivePriceResponse | undefined {
+  const raw = livePriceSnapshot as unknown as Partial<LivePriceResponse> | null;
+  if (!raw || typeof raw !== "object" || !raw.prices || typeof raw.prices !== "object") {
+    return undefined;
+  }
+  return {
+    prices: raw.prices as Record<string, LivePrice[]>,
+    stale: Boolean(raw.stale),
+    lastUpdated: typeof raw.lastUpdated === "string" ? raw.lastUpdated : null,
+  };
+}
+
+const snapshot = loadSnapshot();
+
+export function useLivePrices(): { data: LivePriceResponse | undefined } {
+  return { data: snapshot };
 }
 
 /** Format a number as a price string like "$1,299.00" */
@@ -58,7 +65,7 @@ export function mergeVendorPrices(
     liveMap.set(lp.vendor.toLowerCase(), lp);
   }
 
-  // Start with updated static vendors
+  // Only update vendors we already list (keeps curated, affiliate-tagged URLs)
   const merged: VendorListing[] = staticVendors.map((sv) => {
     const live = liveMap.get(sv.store.toLowerCase());
     if (live) {
@@ -67,24 +74,10 @@ export function mergeVendorPrices(
         ...sv,
         price: fmt(live.price),
         inStock: live.inStock,
-        url: live.url,
-        affiliate: live.affiliate,
       };
     }
     return sv;
   });
-
-  // Add any live vendors that weren't in static list
-  for (const lp of liveMap.values()) {
-    merged.push({
-      store: lp.vendor,
-      price: fmt(lp.price),
-      inStock: lp.inStock,
-      url: lp.url,
-      affiliate: lp.affiliate,
-      notes: "",
-    });
-  }
 
   // Sort by price ascending
   merged.sort((a, b) => {
@@ -103,12 +96,18 @@ export function mergeVendorPrices(
 export function livePriceRange(
   staticRange: string,
   staticNum: number,
-  livePrices: LivePrice[] | undefined
+  livePrices: LivePrice[] | undefined,
+  staticVendors?: VendorListing[]
 ): { priceRange: string; priceNum: number } {
-  if (!livePrices || livePrices.length === 0)
+  if (!livePrices || livePrices.length === 0 || !staticVendors)
     return { priceRange: staticRange, priceNum: staticNum };
 
-  const prices = livePrices.map((lp) => lp.price);
+  const merged = mergeVendorPrices(staticVendors, livePrices);
+  const prices = merged
+    .filter((v) => v.price.trim().startsWith("$"))
+    .map((v) => parseFloat(v.price.replace(/[^0-9.]/g, "")))
+    .filter((n) => n > 0);
+  if (prices.length === 0) return { priceRange: staticRange, priceNum: staticNum };
   const min = Math.min(...prices);
   const max = Math.max(...prices);
   return {
@@ -142,8 +141,6 @@ export function mergeAccessoryPrices(
         ...p,
         price: fmt(live.price),
         inStock: live.inStock,
-        url: live.url,
-        affiliate: live.affiliate,
       };
     }
     return p;

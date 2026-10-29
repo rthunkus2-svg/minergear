@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minergear.io/sitemap.xml

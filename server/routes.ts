@@ -65,10 +65,8 @@ export async function registerRoutes(
     res.json({ success: true, message: "Subscribed" });
   });
 
-  app.get("/api/subscribers", (_req, res) => {
-    const subs = loadSubscribers();
-    res.json({ count: subs.length, emails: subs });
-  });
+  // NOTE: the former GET /api/subscribers endpoint (which listed every stored
+  // email address publicly) was removed. Never expose subscriber data over HTTP.
 
   // ─── Live Price Endpoints ───────────────────────────────
 

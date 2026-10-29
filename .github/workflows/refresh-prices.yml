@@ -1,0 +1,40 @@
+name: Weekly price refresh
+
+on:
+  schedule:
+    - cron: "17 9 * * 1" # Mondays 09:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-prices
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Fetch vendor prices
+        run: npx tsx script/fetch-prices.ts
+      - name: Validate data
+        run: npm test
+      - name: Commit snapshot if changed
+        run: |
+          if git diff --quiet -- client/src/data/live-prices.json; then
+            echo "No price changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add client/src/data/live-prices.json
+          git commit -m "chore(prices): weekly vendor price refresh"
+          git push

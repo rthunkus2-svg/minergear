@@ -17,6 +17,9 @@ import {
 } from "@/hooks/use-live-prices";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
+import { usePageMeta } from "@/hooks/use-page-meta";
+import { minerMeta, notFoundMeta } from "@/lib/seo";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -307,6 +310,11 @@ function AccessoryItem({ accessory, allLivePrices }: { accessory: Accessory; all
 export default function MinerDetail() {
   const { id } = useParams<{ id: string }>();
   const miner = useMemo(() => miners.find((m) => m.id === id), [id]);
+  const meta = useMemo(
+    () => (miner ? minerMeta(miner, minerImages[miner.id]) : notFoundMeta),
+    [miner],
+  );
+  usePageMeta(meta);
   const { data: livePriceData } = useLivePrices();
   const livePrices = livePriceData?.prices;
 
@@ -374,6 +382,15 @@ export default function MinerDetail() {
                 <h1 className="text-2xl md:text-3xl font-bold tracking-tight mt-1">{miner.name}</h1>
 
                 <div className="flex items-center gap-2 mt-3 flex-wrap">
+                  {miner.legacy && (
+                    <Badge
+                      variant="outline"
+                      className="text-sm px-3 py-1 text-amber-700 border-amber-500/40 dark:text-amber-400"
+                      data-testid="badge-legacy"
+                    >
+                      Legacy model
+                    </Badge>
+                  )}
                   <Badge variant="secondary" className="text-sm px-3 py-1">
                     {tierLabels[miner.tier]}
                   </Badge>
@@ -381,7 +398,7 @@ export default function MinerDetail() {
                     {miner.algorithm}
                   </Badge>
                   <Badge variant="outline" className="text-sm px-3 py-1 font-bold">
-                    {livePriceRange(miner.priceRange, miner.priceNum, livePrices?.[miner.id]).priceRange}
+                    {livePriceRange(miner.priceRange, miner.priceNum, livePrices?.[miner.id], miner.vendors).priceRange}
                   </Badge>
                   {essentialCount > 0 && (
                     <Badge variant="outline" className="text-sm px-3 py-1 text-primary border-primary/30">
@@ -413,6 +430,7 @@ export default function MinerDetail() {
                   Where to Buy This Miner
                 </h2>
                 <VendorTable vendors={mergeVendorPrices(miner.vendors, livePrices?.[miner.id])} />
+                <AffiliateDisclosure className="mt-4" />
                 {livePriceData?.lastUpdated && (
                   <p className="text-xs text-muted-foreground mt-3">
                     Prices last updated: {new Date(livePriceData.lastUpdated).toLocaleString()}
@@ -432,6 +450,7 @@ export default function MinerDetail() {
             <p className="text-base text-muted-foreground mb-8">
               {miner.accessories.length} recommended item{miner.accessories.length !== 1 ? "s" : ""} for your {miner.name} — listed in order of importance.
             </p>
+            <AffiliateDisclosure className="-mt-6 mb-8" />
 
             <div className="space-y-10">
               {accessoriesByCategory.map((group) => {

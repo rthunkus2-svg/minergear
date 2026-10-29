@@ -51,6 +51,7 @@ export interface Miner {
   priceNum: number;          // lowest price numeric for sorting
   vendors: VendorListing[];  // where to buy this miner, best price first
   accessories: Accessory[];
+  legacy?: boolean;          // superseded model, still listed for owners
 }
 
 export const miners: Miner[] = [
@@ -73,13 +74,13 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "btc",
     tier: "industrial",
-    priceRange: "$3,449.00 – $4,179.00",
-    priceNum: 3449,
+    priceRange: "$3,100.00 – $4,600.00",
+    priceNum: 3100,
     vendors: [
-      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-xp-bitcoin-miner-270th-s-bt-miners/", price: "$5,535.00", affiliate: false, inStock: true, notes: "Ships from USA, new unit" },
-      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s21-xp-bitcoin-miner/", price: "$6,299.00", affiliate: false, inStock: true, notes: "Express shipping available" },
-      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21-xp-270", price: "$4,950.00", affiliate: true, inStock: true, notes: "5-10% partner commission, 30-day cookie" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-xp/?ref=kcuwuiay", price: "$5,999.00", affiliate: true, inStock: true, notes: "Use coupon DEAL80 for $80 off" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-xp-bitcoin-miner-270th-s-bt-miners/", price: "$3,100.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s21-xp-bitcoin-miner/", price: "$3,299.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-xp-bitcoin-miner/?ref=kcuwuiay", price: "$3,299.00", affiliate: true, inStock: true, notes: "New unit" },
+      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21-xp-270", price: "$4,600.00", affiliate: true, inStock: true, notes: "Ships from USA" },
     ],
     accessories: [
       // POWER
@@ -120,7 +121,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "S21/T21 Water Cooling Plate Kit", price: "$80.00 - $150.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
+          { name: "S21/T21 Water Cooling Plate Kit", price: "From $80.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
           { name: "Antminer S21 Hydro Cooling Kit", price: "$280.00 - $350.00", url: "https://www.aliexpress.com/item/1005006719196301.html", store: "AliExpress", affiliate: false, inStock: true },
         ],
       },
@@ -133,7 +134,6 @@ export const miners: Miner[] = [
         rank: 2,
         essential: false,
         products: [
-          { name: "Antminer S21 Replacement Fan", price: "$18.00 - $25.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Cooling-Fan.asp", store: "Zeus Mining", affiliate: false, inStock: true },
           { name: "S21/T21 Cooling Fan Set", price: "$35.00 - $45.00", url: "https://www.amazon.com/s?k=antminer+S21+replacement+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -171,7 +171,7 @@ export const miners: Miner[] = [
         rank: 3,
         essential: false,
         products: [
-          { name: "LuxOS Firmware (Free Download)", price: "Free (devfee model)", url: "https://luxor.tech/firmware", store: "Luxor Tech", affiliate: false, inStock: true },
+          { name: "LuxOS Firmware (Free Download)", price: "Free (devfee model)", url: "https://luxor.tech/mining/firmware", store: "Luxor Tech", affiliate: false, inStock: true },
         ],
       },
       // INFRASTRUCTURE
@@ -206,14 +206,14 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "btc",
     tier: "industrial",
-    priceRange: "$2,399.00",
-    priceNum: 2399,
+    priceRange: "$1,850.00 – $5,374.00",
+    priceNum: 1850,
     vendors: [
-      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s21-pro-btc-miner/", price: "$3,599.00", affiliate: false, inStock: true, notes: "Express shipping available" },
-      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-pro-bitcoin-miner-234th-s-bt-miners/", price: "$3,790.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-pro-bitcoin-miner-234th-s-bt-miners/", price: "$1,850.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s21-pro-btc-miner-234th/", price: "$2,069.00", affiliate: false, inStock: true, notes: "Express shipping available" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-pro-bitcoin-miner-234th-s/?ref=kcuwuiay", price: "$2,069.00", affiliate: true, inStock: true, notes: "New unit" },
+      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21-pro", price: "$2,850.00", affiliate: true, inStock: true, notes: "Ships from USA" },
       { store: "Wattum", url: "https://wattum.io/products/new-bitmain-antminer-s21-pro-234t", price: "$5,374.00", affiliate: false, inStock: true, notes: "Ships from USA, new unit" },
-      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21-pro", price: "$3,250.00", affiliate: true, inStock: true, notes: "Best price — 5-10% partner commission, 30-day cookie" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-pro/?ref=kcuwuiay", price: "$4,499.00", affiliate: true, inStock: true, notes: "Use coupon DEAL80 for $80 off" },
     ],
     accessories: [
       {
@@ -252,7 +252,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "S21/T21 Water Cooling Plate Kit", price: "$80.00 - $150.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
+          { name: "S21/T21 Water Cooling Plate Kit", price: "From $80.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
           { name: "Antminer S21 Hydro Conversion", price: "$280.00 - $350.00", url: "https://www.aliexpress.com/item/1005006719196301.html", store: "AliExpress", affiliate: false, inStock: true },
         ],
       },
@@ -265,7 +265,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: false,
         products: [
-          { name: "Antminer S21 Replacement Fan", price: "$18.00 - $25.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Cooling-Fan.asp", store: "Zeus Mining", affiliate: false, inStock: true },
+          { name: "Bitmain Antminer Fan 6400rpm (S21 Pro, S21+)", price: "$15.00", url: "https://www.cryptominerbros.com/product/bitmain-antminer-fan-6400rpm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "S21 Fan Set on Amazon", price: "$35.00 - $45.00", url: "https://www.amazon.com/s?k=antminer+S21+replacement+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -324,13 +324,13 @@ export const miners: Miner[] = [
     releaseYear: 2024,
     category: "btc",
     tier: "industrial",
-    priceRange: "$2,199.00",
-    priceNum: 2199,
+    priceRange: "$1,449.00 – $2,450.00",
+    priceNum: 1449,
     vendors: [
-      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s21-plus-bitcoin-miner/", price: "$2,199.00", affiliate: false, inStock: true, notes: "235 TH/s model" },
-      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-plus-bitcoin-miner-235th-s-bt-miners/", price: "$2,585.00", affiliate: false, inStock: true, notes: "Ships from USA" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-plus/?ref=kcuwuiay", price: "$2,999.00", affiliate: true, inStock: true, notes: "Coupon DEAL80 for $80 off" },
-      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21-plus", price: "$3,650.00", affiliate: true, inStock: true, notes: "Hyd 358T model — 5-10% partner commission" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s21-plus-bitcoin-miner/", price: "$1,449.00", affiliate: false, inStock: true, notes: "235 TH/s model" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-plus-bitcoin-miner/?ref=kcuwuiay", price: "$1,449.00", affiliate: true, inStock: true, notes: "New unit" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-plus-bitcoin-miner-bt-miners/", price: "$1,538.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21-plus-235", price: "$2,450.00", affiliate: true, inStock: true, notes: "S21+ 235 TH/s" },
     ],
     accessories: [
       {
@@ -355,7 +355,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "S21/T21 Water Cooling Kit", price: "$80.00 - $150.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
+          { name: "S21/T21 Water Cooling Kit", price: "From $80.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
           { name: "S21 Full Hydro Conversion", price: "$280.00 - $350.00", url: "https://www.aliexpress.com/item/1005006719196301.html", store: "AliExpress", affiliate: false, inStock: true },
         ],
       },
@@ -392,7 +392,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: false,
         products: [
-          { name: "Bitmain Antminer Fan 6400rpm (S21 Pro, S21+)", price: "$17.00", url: "https://www.cryptominerbros.com/product/bitmain-antminer-fan-6400rpm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Bitmain Antminer Fan 6400rpm (S21 Pro, S21+)", price: "$15.00", url: "https://www.cryptominerbros.com/product/bitmain-antminer-fan-6400rpm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
         ],
       },
       {
@@ -426,12 +426,11 @@ export const miners: Miner[] = [
     releaseYear: 2024,
     category: "btc",
     tier: "industrial",
-    priceRange: "$1,699.00",
-    priceNum: 1699,
+    priceRange: "$949.00 – $1,070.00",
+    priceNum: 949,
     vendors: [
-      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-bitcoin-miner-200th-s-bt-miners/", price: "$1,850.00", affiliate: false, inStock: true, notes: "Ships from USA" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-200th/?ref=kcuwuiay", price: "$2,199.00", affiliate: true, inStock: true, notes: "Coupon DEAL80 for $80 off" },
-      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitmain-antminer-s21-200th?aff=876", price: "$2,499.00", affiliate: true, inStock: true, notes: "3.3% affiliate commission" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21-bitcoin-asic-miner/?ref=kcuwuiay", price: "$949.00", affiliate: true, inStock: true, notes: "New unit" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-bitcoin-miner-200th-s-bt-miners/", price: "$1,070.00", affiliate: false, inStock: true, notes: "Ships from USA" },
     ],
     accessories: [
       {
@@ -456,7 +455,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Water Cooling Plate Kit", price: "$80.00 - $150.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
+          { name: "Water Cooling Plate Kit", price: "From $80.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
         ],
       },
       {
@@ -468,7 +467,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "LuxOS Firmware", price: "Free (devfee)", url: "https://luxor.tech/firmware", store: "Luxor Tech", affiliate: false, inStock: true },
+          { name: "LuxOS Firmware", price: "Free (devfee)", url: "https://luxor.tech/mining/firmware", store: "Luxor Tech", affiliate: false, inStock: true },
         ],
       },
       {
@@ -480,7 +479,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: true,
         products: [
-          { name: "Antminer Antwire 20SP-P33-P13 Replacement Power Cable", price: "$13.00", url: "https://www.cryptominerbros.com/product/antminer-antwire-20sp-p33-p131-2m-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Antminer Antwire 20SP-P33-P13 Replacement Power Cable", price: "$14.00", url: "https://www.cryptominerbros.com/product/antminer-antwire-20sp-p33-p131-2m-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
         ],
       },
       {
@@ -526,12 +525,11 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "btc",
     tier: "industrial",
-    priceRange: "$8,349.00",
-    priceNum: 8349,
+    priceRange: "$8,268.00 – $8,349.00",
+    priceNum: 8268,
     vendors: [
       { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s23-bitcoin-miner-318th-s-bt-miners/", price: "$8,268.00", affiliate: false, inStock: true, notes: "Ships from USA" },
       { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s23-bitcoin-miner/", price: "$8,349.00", affiliate: false, inStock: true, notes: "New unit" },
-      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s23-3u", price: "$32,145.00", affiliate: true, inStock: true, notes: "3U 1.16Ph model — 5-10% partner commission" },
     ],
     accessories: [
       {
@@ -568,7 +566,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Water Cooling Plate Kit", price: "$80.00 - $150.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
+          { name: "Water Cooling Plate Kit", price: "From $80.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
         ],
       },
       {
@@ -626,11 +624,10 @@ export const miners: Miner[] = [
     releaseYear: 2024,
     category: "btc",
     tier: "industrial",
-    priceRange: "$2,100.00 – $3,294.99",
-    priceNum: 2100,
+    priceRange: "$950.00",
+    priceNum: 950,
     vendors: [
-      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitmain-antminer-t21-190th-s-3610w?aff=876", price: "$3,294.99", affiliate: true, inStock: false, notes: "3.3% affiliate commission" },
-      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-t21-bitcoin-miner-190th-s-bt-miners/", price: "$2,850.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-t21-190th-s-bitcoin-miner/", price: "$950.00", affiliate: false, inStock: true, notes: "Ships from USA" },
     ],
     accessories: [
       {
@@ -655,7 +652,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "S21/T21 Water Cooling Kit", price: "$80.00 - $150.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
+          { name: "S21/T21 Water Cooling Kit", price: "From $80.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3454", store: "Zeus Mining", affiliate: false, inStock: true },
         ],
       },
       {
@@ -679,7 +676,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: true,
         products: [
-          { name: "Antminer Antwire 40TP-P33-P13 Replacement Power Cable", price: "$17.00", url: "https://www.cryptominerbros.com/product/antminer-antwire-40tp-p33-p13-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Antminer Antwire 40TP-P33-P13 Replacement Power Cable", price: "$15.00", url: "https://www.cryptominerbros.com/product/antminer-antwire-40tp-p33-p13-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
         ],
       },
       {
@@ -728,8 +725,8 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "btc",
     tier: "industrial",
-    priceRange: "$3,300 - $3,400",
-    priceNum: 3300,
+    priceRange: "$3,366.90",
+    priceNum: 3366.9,
     vendors: [
       { store: "Canaan Official", url: "https://shop.canaan.io/products/avalon-miner-a1566i-261t", price: "$3,366.90", affiliate: false, inStock: true, notes: "Direct from manufacturer, SPOT" },
     ],
@@ -768,7 +765,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: false,
         products: [
-          { name: "Canaan Avalon Fan 120mm DF1205012B2FN (A1346, A1466, A1566)", price: "$10.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-120mm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Canaan Avalon Fan 120mm DF1205012B2FN (A1346, A1466, A1566)", price: "$12.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-120mm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
         ],
       },
       {
@@ -814,8 +811,8 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "btc",
     tier: "industrial",
-    priceRange: "$2,700 - $2,800",
-    priceNum: 2700,
+    priceRange: "$2,762.50",
+    priceNum: 2762.5,
     vendors: [
       { store: "Canaan Official", url: "https://shop.canaan.io/products/avalon-miner-a15pro-221t", price: "$2,762.50", affiliate: false, inStock: true, notes: "SPOT, HOT — $12.5/TH" },
     ],
@@ -853,7 +850,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Canaan Avalon Fan 120mm DF1205012B2FN (A1346, A1466, A1566)", price: "$10.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-120mm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Canaan Avalon Fan 120mm DF1205012B2FN (A1346, A1466, A1566)", price: "$12.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-120mm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
         ],
       },
       {
@@ -900,14 +897,14 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "btc",
     tier: "home",
-    priceRange: "$1,499.00 – $1,888.00",
-    priceNum: 1499,
+    priceRange: "$1,349.00 – $1,850.24",
+    priceNum: 1349,
     vendors: [
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/canaan-avalon-q-bitcoin-miner/?ref=kcuwuiay", price: "$1,499.00", affiliate: true, inStock: true, notes: "Up to 1% affiliate commission" },
+      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/canaan-avalon-q-90th-bitcoin-home-miner/", price: "$1,349.00", affiliate: true, inStock: true, notes: "Home-miner specialist" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/canaan-avalon-q-bitcoin-miner/?ref=kcuwuiay", price: "$1,499.00", affiliate: true, inStock: true, notes: "Includes PSU" },
       { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/canaan-avalon-q-bitcoin-miner/", price: "$1,499.00", affiliate: false, inStock: true, notes: "Includes PSU" },
-      { store: "Canaan Official", url: "https://shop.canaan.io/products/avalon-q-1", price: "$1,850.24", affiliate: false, inStock: true, notes: "Direct from manufacturer, 2% off" },
-      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/canaan-avalon-q-90th-bitcoin-home-miner/", price: "$1,888.00", affiliate: true, inStock: true, notes: "Affiliate program available" },
       { store: "Zeus Mining", url: "https://www.zeusbtc.com/Asic-Miner/Asic-Miner-Details.asp?ID=3865", price: "$1,699.00", affiliate: false, inStock: true, notes: "Ships globally" },
+      { store: "Canaan Official", url: "https://shop.canaan.io/products/avalon-q-1", price: "$1,850.24", affiliate: false, inStock: true, notes: "Direct from manufacturer" },
     ],
     accessories: [
       {
@@ -919,7 +916,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "Canaan PSU4100-03 for Avalon Q", price: "$99.00 - $120.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3972", store: "Zeus Mining", affiliate: false, inStock: true },
+          { name: "Canaan PSU4100-03 for Avalon Q", price: "$130.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Parts-Tools-Details.asp?ID=3972", store: "Zeus Mining", affiliate: false, inStock: true },
           { name: "Avalon Q PSU Replacement", price: "$110.00 - $150.00", url: "https://www.amazon.com/s?k=Canaan+Avalon+Q+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -945,7 +942,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Canaan Avalon Q Fan", price: "$15.00 - $20.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-avalon-q/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Canaan Avalon Q Fan", price: "$20.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-avalon-q/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
           { name: "Avalon Q Replacement Fan", price: "$18.00 - $25.00", url: "https://www.amazon.com/s?k=avalon+Q+replacement+fan+120mm&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -993,8 +990,8 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "btc",
     tier: "home",
-    priceRange: "$849.00 – $1,288.00",
-    priceNum: 849,
+    priceRange: "$1,262.24",
+    priceNum: 1262.24,
     vendors: [
       { store: "Canaan Official", url: "https://shop.canaan.io/products/avalon-mini-3", price: "$1,262.24", affiliate: false, inStock: true, notes: "Direct from manufacturer, SPOT" },
     ],
@@ -1045,7 +1042,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: false,
         products: [
-          { name: "Canaan Avalon Fan 120mm DF1205012B2FN", price: "$10.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-120mm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Canaan Avalon Fan 120mm DF1205012B2FN", price: "$12.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-120mm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
         ],
       },
     ],
@@ -1066,13 +1063,13 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "btc",
     tier: "hobby",
-    priceRange: "$249.00 – $299.99",
-    priceNum: 249,
+    priceRange: "$219.00 – $293.02",
+    priceNum: 219,
     vendors: [
+      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/avalon-nano-3s-bitcoin-solo-miner/", price: "$219.00", affiliate: true, inStock: true, notes: "Home-miner specialist" },
       { store: "Zeus Mining", url: "https://www.zeusbtc.com/Asic-Miner/Asic-Miner-Details.asp?ID=3853", price: "$249.00", affiliate: false, inStock: true, notes: "Ships globally" },
-      { store: "Helium Deploy", url: "https://heliumdeploy.com/products/avalon-nano-3s?sca_ref=10850489.OFZKz7luYd", price: "$250.00", affiliate: true, inStock: true, notes: "On sale — use code MINERGEAR for discount" },
+      { store: "Helium Deploy", url: "https://heliumdeploy.com/products/avalon-nano-3s?sca_ref=10850489.OFZKz7luYd", price: "$250.00", affiliate: true, inStock: false, notes: "Out of stock at last check" },
       { store: "Canaan Official", url: "https://shop.canaan.io/products/avalon-nano-3s-1", price: "$293.02", affiliate: false, inStock: true, notes: "Direct from manufacturer" },
-      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/avalon-nano-3s-bitcoin-solo-miner/", price: "$299.99", affiliate: true, inStock: true, notes: "Affiliate program" },
     ],
     accessories: [
       {
@@ -1146,11 +1143,11 @@ export const miners: Miner[] = [
     releaseYear: 2024,
     category: "btc",
     tier: "industrial",
-    priceRange: "$1,799.00 – $2,499.00",
+    priceRange: "$1,799.00 – $3,600.00",
     priceNum: 1799,
     vendors: [
-      { store: "BT-Miners", url: "https://bt-miners.com/products/microbt-whatsminer-m60s-bitcoin-miner-186th-s-bt-miners/", price: "$1,650.00", affiliate: false, inStock: true, notes: "Ships from USA, authorized dealer" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/microbt-whatsminer-m60s/?ref=kcuwuiay", price: "$1,999.00", affiliate: true, inStock: true, notes: "Up to 1% affiliate commission" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/microbt-whatsminer-m60s-bitcoin-miner/?ref=kcuwuiay", price: "$1,799.00", affiliate: true, inStock: true, notes: "New unit" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/whatsminer-m60s-bitcoin-miner-186th-s/", price: "$3,600.00", affiliate: false, inStock: true, notes: "Ships from USA, authorized dealer" },
     ],
     accessories: [
       {
@@ -1162,7 +1159,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "P221B PSU (Official)", price: "$200.00 - $300.00", url: "https://bt-miners.com/products/whatsminer-replacement-power-supply-p221b-psu_17v-21-6v-emc-for-whatsminer-m60-m60s-m30s-m50-m50s-m50s-m50s-m30s-m30s-m31s-etc-air-cooling-miner/", store: "BT-Miners", affiliate: false, inStock: true },
+          { name: "P221B PSU (Official)", price: "$390.00", url: "https://bt-miners.com/products/whatsminer-replacement-power-supply-p221b-psu_17v-21-6v-emc-for-whatsminer-m60-m60s-m30s-m50-m50s-m50s-m50s-m30s-m30s-m31s-etc-air-cooling-miner/", store: "BT-Miners", affiliate: false, inStock: true },
           { name: "Whatsminer PSU on Amazon", price: "$250.00 - $350.00", url: "https://www.amazon.com/s?k=whatsminer+P221B+PSU+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -1175,7 +1172,6 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "M60 Series Fan", price: "$25.00 - $40.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Cooling-Fan.asp", store: "Zeus Mining", affiliate: false, inStock: true },
           { name: "Whatsminer Fan on Amazon", price: "$35.00 - $50.00", url: "https://www.amazon.com/s?k=whatsminer+M60+replacement+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -1221,6 +1217,7 @@ export const miners: Miner[] = [
   },
   {
     id: "whatsminer-m50s",
+    legacy: true,
     name: "WhatsMiner M50S",
     manufacturer: "MicroBT",
     algorithm: "SHA-256",
@@ -1235,11 +1232,11 @@ export const miners: Miner[] = [
     releaseYear: 2023,
     category: "btc",
     tier: "industrial",
-    priceRange: "$699.00",
-    priceNum: 699,
+    priceRange: "$759.00 – $800.00",
+    priceNum: 759,
     vendors: [
-      { store: "BT-Miners", url: "https://bt-miners.com/products/microbt-whatsminer-m50s-bitcoin-miner-126th-s-bt-miners/", price: "$850.00", affiliate: false, inStock: true, notes: "Budget miner, ships from USA" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/microbt-whatsminer-m50s-126th/?ref=kcuwuiay", price: "$1,099.00", affiliate: true, inStock: true, notes: "Coupon available" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/microbt-whatsminer-m50s-126th-s-bitcoin-miner/?ref=kcuwuiay", price: "$759.00", affiliate: true, inStock: true, notes: "New unit" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/whatsminer-m50s-126th-s-bitcoin-miner/", price: "$800.00", affiliate: false, inStock: true, notes: "Budget miner, ships from USA" },
     ],
     accessories: [
       {
@@ -1251,7 +1248,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: true,
         products: [
-          { name: "P221B PSU", price: "$200.00 - $300.00", url: "https://bt-miners.com/products/whatsminer-replacement-power-supply-p221b-psu_17v-21-6v-emc-for-whatsminer-m60-m60s-m30s-m50-m50s-m50s-m50s-m30s-m30s-m31s-etc-air-cooling-miner/", store: "BT-Miners", affiliate: false, inStock: true },
+          { name: "P221B PSU", price: "$390.00", url: "https://bt-miners.com/products/whatsminer-replacement-power-supply-p221b-psu_17v-21-6v-emc-for-whatsminer-m60-m60s-m30s-m50-m50s-m50s-m50s-m30s-m30s-m31s-etc-air-cooling-miner/", store: "BT-Miners", affiliate: false, inStock: true },
         ],
       },
       {
@@ -1288,7 +1285,6 @@ export const miners: Miner[] = [
         essential: false,
         products: [
           { name: "WhatsMiner M50S Replacement Fan", price: "$25.00 - $40.00", url: "https://www.amazon.com/s?k=whatsminer+M50+replacement+fan+cooling&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "P221 Replacement Fan (Zeus Mining)", price: "$20.00 - $35.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Cooling-Fan.asp", store: "Zeus Mining", affiliate: false, inStock: true },
         ],
       },
       {
@@ -1310,28 +1306,29 @@ export const miners: Miner[] = [
   // ==========================================
   {
     id: "bitaxe-gamma",
-    name: "Bitaxe Gamma 601",
+    name: "Bitaxe Gamma 602",
     manufacturer: "Open Source (Solo Satoshi)",
     algorithm: "SHA-256",
     hashrate: "1.2 TH/s",
     hashrateNum: 1.2,
-    power: "17W",
-    powerNum: 17,
-    efficiency: "14 J/TH",
-    efficiencyNum: 14,
+    power: "18-20W",
+    powerNum: 19,
+    efficiency: "15-17 J/TH",
+    efficiencyNum: 16,
     cooling: "Air (Fan + Heatsink)",
-    voltage: "5V USB-C",
+    voltage: "5V DC (5.5×2.1mm barrel)",
     releaseYear: 2025,
     category: "solo",
     tier: "hobby",
-    priceRange: "$77.33 – $134.99",
-    priceNum: 77.33,
+    priceRange: "$61.00 – $121.00",
+    priceNum: 61,
     vendors: [
-      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-gamma/", price: "$77.33 - $91.13", affiliate: true, inStock: true, notes: "Original builder, affiliate program" },
-      { store: "Helium Deploy", url: "https://heliumdeploy.com/products/bitaxe-gamma?sca_ref=10850489.OFZKz7luYd", price: "$95.00", affiliate: true, inStock: true, notes: "Use code MINERGEAR for discount" },
-      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitaxe-gamma-601-bitcoin-miner/", price: "$119.00", affiliate: false, inStock: true, notes: "Express shipping" },
-      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitcoin-merch-bitaxe-601-gamma-power-supply-bitcoin-miner-1-2th-s?aff=876", price: "$134.99", affiliate: true, inStock: false, notes: "Includes power supply, 3.3% commission" },
-      { store: "Power Mining", url: "https://shop.powermining.io/products/bitaxe-gamma", price: "$89.00", affiliate: true, inStock: false, notes: "Pre-order, up to 10% commission" },
+      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-gamma/", price: "$61.00", affiliate: true, inStock: true, notes: "602 model, original builder" },
+      { store: "Helium Deploy", url: "https://heliumdeploy.com/products/bitaxe-gamma-601-v2-0?sca_ref=10850489.OFZKz7luYd", price: "$79.00", affiliate: true, inStock: false, notes: "602 model, out of stock at last check" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitaxe-gamma-602-bitcoin-miner/", price: "$89.00", affiliate: false, inStock: true, notes: "Gamma 602 revision" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitaxe-gamma-602-bitcoin-miner/?ref=kcuwuiay", price: "$89.00", affiliate: true, inStock: true, notes: "Gamma 602 revision" },
+      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitcoin-merch-bitaxe-601-gamma-power-supply-bitcoin-miner-1-5th-s?aff=876", price: "$119.99", affiliate: true, inStock: true, notes: "Includes power supply" },
+      { store: "Power Mining", url: "https://shop.powermining.io/products/bitaxe-gamma", price: "$121.00", affiliate: true, inStock: false, notes: "Open-source miner specialist" },
     ],
     accessories: [
       {
@@ -1343,8 +1340,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "52Pi Low-Profile Plus Cooler", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler+raspberry+pi+5&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "52Pi Cooler (Official Store)", price: "$19.99", url: "https://52pi.com/products/low-profile-plus-cpu-cooler-for-raspberry-pi-5-aluminum-heatsink-with-cooling-fan-for-raspberry-pi-5", store: "52Pi", affiliate: false, inStock: true },
+          { name: "52Pi Low-Profile Plus Cooler", price: "$16.99", url: "https://www.amazon.com/dp/B0HFQ5BQ2Q?tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "52Pi Cooler (Official Store)", price: "$16.99", url: "https://52pi.com/products/low-profile-plus-cpu-cooler-for-raspberry-pi-5-aluminum-heatsink-with-cooling-fan-for-raspberry-pi-5", store: "52Pi", affiliate: false, inStock: true },
         ],
       },
       {
@@ -1369,8 +1366,8 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Bitaxe Ice Tower Adapter", price: "$8.00 - $12.00", url: "https://ixtech.xyz/products/bitaxe-ice-tower-adaptor", store: "IxTech", affiliate: false, inStock: true },
-          { name: "Noctua Fan Adapter for 52Pi", price: "$6.00 - $10.00", url: "https://ixtech.xyz/products/noctua-a6x15-or-a6x25-adapter-for-52pi-low-profile-plus-ice-tower", store: "IxTech", affiliate: false, inStock: true },
+          { name: "Bitaxe Ice Tower Adapter", price: "Free / varies", url: "https://ixtech.xyz/products/bitaxe-ice-tower-adaptor", store: "IxTech", affiliate: false, inStock: true },
+          { name: "Noctua Fan Adapter for 52Pi", price: "Free / varies", url: "https://ixtech.xyz/products/noctua-a6x15-or-a6x25-adapter-for-52pi-low-profile-plus-ice-tower", store: "IxTech", affiliate: false, inStock: true },
         ],
       },
       {
@@ -1383,20 +1380,20 @@ export const miners: Miner[] = [
         essential: false,
         products: [
           { name: "Thermal Grizzly Kryonaut Extreme", price: "$13.99", url: "https://www.amazon.com/s?k=thermal+grizzly+kryonaut+extreme&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Noctua NT-H2 Thermal Paste", price: "$9.95", url: "https://www.amazon.com/s?k=noctua+NT-H2+thermal+paste&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NT-H2 Thermal Paste", price: "$14.95", url: "https://www.amazon.com/dp/B07MZ45X9G?tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
         id: "gamma-usbc-psu",
-        name: "USB-C PD Power Adapter (30W+)",
+        name: "5V Barrel-Jack Power Supply (30W+)",
         category: "power",
-        description: "Quality USB-C power delivery adapter. 5V 3A minimum, higher wattage for overclocking headroom.",
-        insight: "The Bitaxe Gamma draws only 17W at stock — any 30W USB-C charger works. But if you plan to overclock, get a 45W+ adapter to provide headroom for increased power draw. A poor adapter causes instability and random reboots.",
+        description: "5V DC power supply with a 5.5×2.1mm center-positive barrel plug. The Gamma 602 is powered through a barrel jack, not USB-C.",
+        insight: "The Gamma 602 draws roughly 18–20W at stock. A 5V 6A (30W) brick covers stock settings; pick the 5V 8A (40W) unit if you plan to overclock. Underpowered supplies cause brownouts and random reboots.",
         rank: 1,
         essential: true,
         products: [
-          { name: "Anker 30W USB-C Charger", price: "$13.99", url: "https://www.amazon.com/s?k=anker+30W+USB-C+charger&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "Samsung 45W USB-C Adapter", price: "$19.99", url: "https://www.amazon.com/s?k=samsung+45W+USB-C+power+adapter&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Bitaxe 30W 5V 6A Power Supply", price: "$9.99", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-power-supply-5v-6a-30w/", store: "Solo Satoshi", affiliate: true, inStock: true },
+          { name: "Bitaxe 40W 5V 8A Power Supply", price: "$10.99", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-40w-5v-8a-power-supply/", store: "Solo Satoshi", affiliate: true, inStock: true },
         ],
       },
     ],
@@ -1420,7 +1417,7 @@ export const miners: Miner[] = [
     priceRange: "$104.29",
     priceNum: 104.29,
     vendors: [
-      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-duo-bitcoin-solo-miner-650-model/", price: "$104.29 - $119.07", affiliate: true, inStock: true, notes: "Affiliate program available" },
+      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-duo-bitcoin-solo-miner-650-model/", price: "$104.29", affiliate: true, inStock: true, notes: "650 model" },
     ],
     accessories: [
       {
@@ -1445,7 +1442,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "52Pi Low-Profile Plus Cooler", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "52Pi Low-Profile Plus Cooler", price: "$16.99", url: "https://www.amazon.com/dp/B0HFQ5BQ2Q?tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1505,10 +1502,10 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "solo",
     tier: "hobby",
-    priceRange: "$205.49",
-    priceNum: 205.49,
+    priceRange: "$173.99",
+    priceNum: 173.99,
     vendors: [
-      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-gt-gamma-turbo/", price: "$205.49 - $223.24", affiliate: true, inStock: true, notes: "Affiliate program available" },
+      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-gt-gamma-turbo/", price: "$173.99", affiliate: true, inStock: true, notes: "801 model" },
     ],
     accessories: [
       {
@@ -1532,7 +1529,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "52Pi Low-Profile Plus", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "52Pi Low-Profile Plus", price: "$16.99", url: "https://www.amazon.com/dp/B0HFQ5BQ2Q?tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
           { name: "Noctua NF-A6x25", price: "$15.90", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+PWM&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -1593,10 +1590,10 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "solo",
     tier: "hobby",
-    priceRange: "$325.00",
-    priceNum: 325,
+    priceRange: "$250.00",
+    priceNum: 250,
     vendors: [
-      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-touch/", price: "$325.00", affiliate: true, inStock: true, notes: "Premium model with touchscreen" },
+      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-touch/", price: "$250.00", affiliate: true, inStock: false, notes: "Touchscreen model, out of stock at last check" },
     ],
     accessories: [
       {
@@ -1620,7 +1617,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "52Pi Low-Profile Plus", price: "$19.99", url: "https://www.amazon.com/s?k=52Pi+low+profile+plus+cooler&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "52Pi Low-Profile Plus", price: "$16.99", url: "https://www.amazon.com/dp/B0HFQ5BQ2Q?tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
           { name: "Noctua NF-A6x25", price: "$15.90", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -1662,7 +1659,7 @@ export const miners: Miner[] = [
         products: [
           { name: "Bitaxe Fan Adapter", price: "$1.00", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-fan-adapter/", store: "Solo Satoshi", affiliate: true, inStock: true },
           { name: "OEM Bitaxe 40mm Replacement Fan", price: "$4.99", url: "https://www.solosatoshi.com/aff/6679/product/bitaxe-replacement-fan/", store: "Solo Satoshi", affiliate: true, inStock: true },
-          { name: "Bitcoin Merch Quiet Fan Upgrade for Bitaxe", price: "$34.99", url: "https://bitcoinmerch.com/products/bitcoin-merch-quiet-fan-upgrade-for-bitaxe-supra-gamma?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
+          { name: "Bitcoin Merch Quiet Fan Upgrade for Bitaxe", price: "$34.99", url: "https://bitcoinmerch.com/products/bitcoin-merch%C2%AE-quiet-fan-upgrade-for-bitaxe?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
         ],
       },
     ],
@@ -1683,12 +1680,12 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "solo",
     tier: "hobby",
-    priceRange: "$290.00 – $499.99",
-    priceNum: 290,
+    priceRange: "$189.99 – $259.99",
+    priceNum: 189.99,
     vendors: [
-      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/nerdqaxe-plus-plus/", price: "$381.62 - $417.99", affiliate: true, inStock: true, notes: "Rev 6.1 model" },
-      { store: "Helium Deploy", url: "https://heliumdeploy.com/products/nerdqaxe-rev-6-1-pro-6th-s?sca_ref=10850489.OFZKz7luYd", price: "$385.00", affiliate: true, inStock: false, notes: "Use code MINERGEAR for discount" },
-      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitcoin-merch-nerdqaxe-4-8th-s-multi-chip-btc-miner?aff=876", price: "$499.99", affiliate: true, inStock: false, notes: "3.3% affiliate commission" },
+      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/nerdqaxe-plus-plus/", price: "$189.99", affiliate: true, inStock: false, notes: "Rev 7, out of stock at last check" },
+      { store: "Helium Deploy", url: "https://heliumdeploy.com/products/nerdqaxe-rev-6-1-6th-s-new?sca_ref=10850489.OFZKz7luYd", price: "$249.00", affiliate: true, inStock: false, notes: "Out of stock at last check" },
+      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/nerdqaxe-plus-plus?aff=876", price: "$259.99", affiliate: true, inStock: true, notes: "Includes power supply" },
     ],
     accessories: [
       {
@@ -1713,7 +1710,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Noctua NF-A4x20 PWM (40mm)", price: "$14.95", url: "https://www.amazon.com/s?k=noctua+NF-A4x20+PWM+40mm+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NF-A4x20 PWM (40mm)", price: "$15.95", url: "https://www.amazon.com/dp/B071W93333?tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
       {
@@ -1726,7 +1723,7 @@ export const miners: Miner[] = [
         essential: false,
         products: [
           { name: "Black 3D Printed NerdQaxe++ Display Stand", price: "$11.99", url: "https://www.solosatoshi.com/aff/6679/product/black-3d-printed-nerdqaxe-display-stand/", store: "Solo Satoshi", affiliate: true, inStock: true },
-          { name: "Bitcoin Merch NerdQAxe++ Stand", price: "$29.99", url: "https://bitcoinmerch.com/products/bitcoin-merch-nerdqaxe-stand?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
+          { name: "Bitcoin Merch NerdQAxe++ Stand", price: "$19.99", url: "https://bitcoinmerch.com/products/bitcoin-merch-nerdqaxe-stand?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
           { name: "Bitcoin Merch NerdQAxe++ Coated Aluminium Stand", price: "$49.99", url: "https://bitcoinmerch.com/products/bitcoin-merch-nerdqaxe-coated-aluminium-stand?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
         ],
       },
@@ -1751,7 +1748,7 @@ export const miners: Miner[] = [
         rank: 2,
         essential: false,
         products: [
-          { name: "NerdQaxe++ 120mm Performance Air-Cooling Upgrade Kit", price: "$59.99", url: "https://bitcoinmerch.com/products/bitcoin-merch-nerdqaxe-120mm-performance-air-cooling-upgrade-kit?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
+          { name: "NerdQaxe++ 120mm Performance Air-Cooling Upgrade Kit", price: "$59.99", url: "https://bitcoinmerch.com/products/bitcoin-merch%C2%AE-nerdqaxe-120mm-performance-air-cooling-upgrade-kit?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
           { name: "NerdQaxe++ Fan Replacement", price: "$19.99", url: "https://bitcoinmerch.com/products/bitcoin-merch-nerdqaxe-fan-replacement?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
           { name: "Noctua NF-A8 PWM 80mm Fan", price: "$19.99", url: "https://www.solosatoshi.com/aff/6679/product/noctua-nf-a8-pwm-premium-quiet-fan-4-pin-80mm-brown/", store: "Solo Satoshi", affiliate: true, inStock: true },
         ],
@@ -1765,7 +1762,7 @@ export const miners: Miner[] = [
         rank: 3,
         essential: false,
         products: [
-          { name: "Jumbo Screen Upgrade NerdQaxe++ and NerdQaxe++ Hydro", price: "$99.99", url: "https://bitcoinmerch.com/products/bitcoin-merch-jumbo-screen-upgrade-nerdqaxe-and-nerdqaxe-hydro?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
+          { name: "Jumbo Screen Upgrade NerdQaxe++ and NerdQaxe++ Hydro", price: "$99.99", url: "https://bitcoinmerch.com/products/bitcoin-merch%C2%AE-jumbo-nerdqaxe-screen-upgrade?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
           { name: "NerdQaxe++ Replacement Screen", price: "$39.99", url: "https://bitcoinmerch.com/products/nerdqaxe-replacement-screen?aff=876", store: "Bitcoin Merch", affiliate: true, inStock: true },
         ],
       },
@@ -1787,13 +1784,13 @@ export const miners: Miner[] = [
     releaseYear: 2025,
     category: "solo",
     tier: "hobby",
-    priceRange: "$390.00 – $900.00",
-    priceNum: 390,
+    priceRange: "$339.00 – $424.99",
+    priceNum: 339,
     vendors: [
-      { store: "Zeus Mining", url: "https://www.zeusbtc.com/Asic-Miner/Asic-Miner-Details.asp?ID=3992", price: "$450.00", affiliate: false, inStock: true, notes: "Rev 3.1, 12 TH/s" },
-      { store: "Solo Satoshi", url: "https://www.solosatoshi.com/aff/6679/product/nerdoctaxe/", price: "$650.00 - $750.00", affiliate: true, inStock: true, notes: "Affiliate program" },
-      { store: "Helium Deploy", url: "https://heliumdeploy.com/products/nerdoctaxe-home-bitcoin-miner-up-to-12th-s?sca_ref=10850489.OFZKz7luYd", price: "$699.00", affiliate: true, inStock: false, notes: "Bundle available — use code MINERGEAR for discount" },
-      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitcoin-merch-nerdoctaxe-9-6th-s?aff=876", price: "$900.00", affiliate: true, inStock: false, notes: "Includes PSU, 3.3% commission" },
+      { store: "Zeus Mining", url: "https://www.zeusbtc.com/Asic-Miner/Asic-Miner-Details.asp?ID=3992", price: "$339.00", affiliate: false, inStock: true, notes: "Rev 3.1, 12 TH/s" },
+      { store: "Helium Deploy", url: "https://heliumdeploy.com/products/nerdoctaxe-home-bitcoin-miner-up-to-12th-s?sca_ref=10850489.OFZKz7luYd", price: "$359.99", affiliate: true, inStock: false, notes: "Out of stock at last check" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/nerdminer-nerdoctaxe-rev-3-1-bitcoin-miner/?ref=kcuwuiay", price: "$399.00", affiliate: true, inStock: true, notes: "Rev 3.1" },
+      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitcoin-merch-nerdoctaxe-9-6th-s?aff=876", price: "$424.99", affiliate: true, inStock: true, notes: "Includes power supply" },
     ],
     accessories: [
       {
@@ -1818,7 +1815,7 @@ export const miners: Miner[] = [
         rank: 1,
         essential: false,
         products: [
-          { name: "Noctua NF-A8 PWM (80mm) x2", price: "$16.95 each", url: "https://www.amazon.com/s?k=noctua+NF-A8+PWM+80mm+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+          { name: "Noctua NF-A8 PWM (80mm) x2", price: "$17.95 each", url: "https://www.amazon.com/dp/B00NEMG62M?tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
           { name: "Noctua NF-A6x25 x2 (if 60mm)", price: "$15.90 each", url: "https://www.amazon.com/s?k=noctua+NF-A6x25+PWM+fan&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
         ],
       },
@@ -1879,12 +1876,12 @@ export const miners: Miner[] = [
     releaseYear: 2024,
     category: "ltc",
     tier: "industrial",
-    priceRange: "$3,479.00 – $3,699.00",
-    priceNum: 3479,
+    priceRange: "$2,350.00 – $4,500.00",
+    priceNum: 2350,
     vendors: [
-      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-l9-litecoin-miner-16000mh-s-bt-miners/", price: "$6,800.00", affiliate: false, inStock: true, notes: "Ships from USA" },
-      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/l9", price: "$4,350.00", affiliate: true, inStock: true, notes: "Best price — 5-10% partner commission, 30-day cookie" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-l9/?ref=kcuwuiay", price: "$7,499.00", affiliate: true, inStock: true, notes: "Up to 1% commission" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-l9-litecoin-dogecoin-miner-bt-miners/", price: "$2,350.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-l9-dogecoin-miner/?ref=kcuwuiay", price: "$2,699.00", affiliate: true, inStock: true, notes: "New unit" },
+      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/l9", price: "$4,500.00", affiliate: true, inStock: true, notes: "Ships from USA" },
     ],
     accessories: [
       {
@@ -1953,6 +1950,7 @@ export const miners: Miner[] = [
   },
   {
     id: "antminer-l7",
+    legacy: true,
     name: "Antminer L7",
     manufacturer: "Bitmain",
     algorithm: "Scrypt",
@@ -1967,12 +1965,12 @@ export const miners: Miner[] = [
     releaseYear: 2022,
     category: "ltc",
     tier: "industrial",
-    priceRange: "$779.00 – $1,379.00",
-    priceNum: 779,
+    priceRange: "$680.00 – $1,300.00",
+    priceNum: 680,
     vendors: [
-      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-l7-litecoin-miner-9500mh-s-bt-miners/", price: "$2,800.00", affiliate: false, inStock: true, notes: "Ships from USA" },
-      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/l7", price: "$1,499.00", affiliate: true, inStock: true, notes: "Best price — 5-10% partner commission, 30-day cookie" },
-      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-l7-9500mh/?ref=kcuwuiay", price: "$3,299.00", affiliate: true, inStock: true, notes: "Coupon available" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-l7-litecoin-dogecoin-miner-bt-miners/", price: "$680.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-l7-9-16gh-s/?ref=kcuwuiay", price: "$749.00", affiliate: true, inStock: true, notes: "9.16 GH/s unit" },
+      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/l7", price: "$1,300.00", affiliate: true, inStock: true, notes: "Ships from USA" },
     ],
     accessories: [
       {
@@ -1985,7 +1983,7 @@ export const miners: Miner[] = [
         essential: true,
         products: [
           { name: "APW12 PSU", price: "$100.00 - $150.00", url: "https://www.amazon.com/s?k=bitmain+APW12+power+supply&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
-          { name: "APW12 1215a PSU", price: "$120.00", url: "https://www.zeusbtc.com/ASIC-Miner-Repair/Miner-Power-Supply.asp", store: "Zeus Mining", affiliate: false, inStock: true },
+          { name: "Antminer APW12+ PSU for L7", price: "$180.00", url: "https://bt-miners.com/products/antminer-power-supply-apw12-for-l7/", store: "BT-Miners", affiliate: false, inStock: true },
         ],
       },
       {
@@ -2038,10 +2036,598 @@ export const miners: Miner[] = [
       },
     ],
   },
+  // ==========================================
+  // 2026 MODELS (added October 2026)
+  // ==========================================
+  {
+    id: "antminer-s23-hyd",
+    name: "Antminer S23 Hyd",
+    manufacturer: "Bitmain",
+    algorithm: "SHA-256",
+    hashrate: "580 TH/s",
+    hashrateNum: 580,
+    power: "5,510W",
+    powerNum: 5510,
+    efficiency: "9.5 J/TH",
+    efficiencyNum: 9.5,
+    cooling: "Hydro (Liquid)",
+    voltage: "380-415V (3-Phase)",
+    releaseYear: 2026,
+    category: "btc",
+    tier: "industrial",
+    priceRange: "$13,389.00 – $15,800.00",
+    priceNum: 13389,
+    vendors: [
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s23-hydro-bitcoin-miner/?ref=kcuwuiay", price: "$13,389.00", affiliate: true, inStock: true, notes: "Ships from USA" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s23-hydro-bitcoin-miner/", price: "$13,389.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitcoin-merch-bitmain-antminer-s23-hydro-563ths-btc-miner?aff=876", price: "$14,899.99", affiliate: true, inStock: true, notes: "563 TH/s variant" },
+      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s23-hyd", price: "$15,785.00", affiliate: true, inStock: true, notes: "Ships from USA" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s23-hyd-bitcoin-miner-580th-bt-miners/", price: "$15,800.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+    ],
+    accessories: [
+      {
+        id: "s23hyd-pdu",
+        name: "3-Phase Mining PDU",
+        category: "power",
+        description: "High-amperage 3-phase PDU for 380–415V hydro miners.",
+        insight: "Hydro units draw 5–6 kW each at 380–415V. A metered 3-phase PDU lets you balance phases and see per-outlet draw. Have a licensed electrician size breakers and conductors.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "CMB24P 160A 3-Phase Crypto Mining PDU", price: "$499.00", url: "https://www.cryptominerbros.com/product/cmb24p-160a-3-phase-crypto-mining-pdu-380-415v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "CMB12P 100A 3-Phase P34 Crypto Mining PDU", price: "$549.00", url: "https://www.cryptominerbros.com/product/cmb12p-100a-3-phase-p34-crypto-mining-pdu/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "s23hyd-heat",
+        name: "Dry Cooler / Heat Exchanger",
+        category: "cooling",
+        description: "Hydro miners need an external liquid loop: pump, dry cooler or plate heat exchanger, and filtration.",
+        insight: "There is no fan on a hydro miner — the loop IS the cooling. Size the dry cooler for the full heat load (≈ the miner's wattage) plus margin, and follow Bitmain's coolant flow and pressure specs.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "Plate Heat Exchanger / Dry Cooler (search)", price: "Varies", url: "https://www.amazon.com/s?k=plate+heat+exchanger+dry+cooler+hydro+miner&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "s23hyd-coolant",
+        name: "Inhibited Coolant",
+        category: "cooling",
+        description: "Corrosion-inhibited glycol or treated water for the loop.",
+        insight: "Plain tap water corrodes cold plates and grows algae. Use inhibited coolant within the manufacturer's pH and conductivity limits.",
+        rank: 2,
+        essential: false,
+        products: [
+          { name: "Inhibited Glycol Coolant (search)", price: "Varies", url: "https://www.amazon.com/s?k=inhibited+propylene+glycol+coolant&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "s23hyd-cable",
+        name: "C19 Power Cable",
+        category: "infrastructure",
+        description: "Replacement or spare C19 power cords.",
+        insight: "Keep a spare; damaged cords are a common cause of downtime.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: "antminer-s23-xp-hyd",
+    name: "Antminer S23 XP Hyd",
+    manufacturer: "Bitmain",
+    algorithm: "SHA-256",
+    hashrate: "600 TH/s",
+    hashrateNum: 600,
+    power: "5,340W",
+    powerNum: 5340,
+    efficiency: "8.9 J/TH",
+    efficiencyNum: 8.9,
+    cooling: "Hydro (Liquid)",
+    voltage: "380-415V (3-Phase)",
+    releaseYear: 2026,
+    category: "btc",
+    tier: "industrial",
+    priceRange: "$15,300.00 – $16,499.00",
+    priceNum: 15300,
+    vendors: [
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s23-xp-hyd-bitcoin-miner-600th/", price: "$15,300.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s23-xp-hydro-bitcoin-miner/?ref=kcuwuiay", price: "$16,499.00", affiliate: true, inStock: true, notes: "Ships from USA" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s23-xp-hydro-bitcoin-miner/", price: "$16,499.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+    ],
+    accessories: [
+      {
+        id: "s23xphyd-pdu",
+        name: "3-Phase Mining PDU",
+        category: "power",
+        description: "High-amperage 3-phase PDU for 380–415V hydro miners.",
+        insight: "Hydro units draw 5–6 kW each at 380–415V. A metered 3-phase PDU lets you balance phases and see per-outlet draw. Have a licensed electrician size breakers and conductors.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "CMB24P 160A 3-Phase Crypto Mining PDU", price: "$499.00", url: "https://www.cryptominerbros.com/product/cmb24p-160a-3-phase-crypto-mining-pdu-380-415v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "CMB12P 100A 3-Phase P34 Crypto Mining PDU", price: "$549.00", url: "https://www.cryptominerbros.com/product/cmb12p-100a-3-phase-p34-crypto-mining-pdu/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "s23xphyd-heat",
+        name: "Dry Cooler / Heat Exchanger",
+        category: "cooling",
+        description: "Hydro miners need an external liquid loop: pump, dry cooler or plate heat exchanger, and filtration.",
+        insight: "There is no fan on a hydro miner — the loop IS the cooling. Size the dry cooler for the full heat load (≈ the miner's wattage) plus margin, and follow Bitmain's coolant flow and pressure specs.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "Plate Heat Exchanger / Dry Cooler (search)", price: "Varies", url: "https://www.amazon.com/s?k=plate+heat+exchanger+dry+cooler+hydro+miner&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "s23xphyd-coolant",
+        name: "Inhibited Coolant",
+        category: "cooling",
+        description: "Corrosion-inhibited glycol or treated water for the loop.",
+        insight: "Plain tap water corrodes cold plates and grows algae. Use inhibited coolant within the manufacturer's pH and conductivity limits.",
+        rank: 2,
+        essential: false,
+        products: [
+          { name: "Inhibited Glycol Coolant (search)", price: "Varies", url: "https://www.amazon.com/s?k=inhibited+propylene+glycol+coolant&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "s23xphyd-cable",
+        name: "C19 Power Cable",
+        category: "infrastructure",
+        description: "Replacement or spare C19 power cords.",
+        insight: "Keep a spare; damaged cords are a common cause of downtime.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: "antminer-s21e-xp-hyd",
+    name: "Antminer S21e XP Hyd",
+    manufacturer: "Bitmain",
+    algorithm: "SHA-256",
+    hashrate: "430 TH/s",
+    hashrateNum: 430,
+    power: "5,590W",
+    powerNum: 5590,
+    efficiency: "13 J/TH",
+    efficiencyNum: 13,
+    cooling: "Hydro (Liquid)",
+    voltage: "380-415V (3-Phase)",
+    releaseYear: 2025,
+    category: "btc",
+    tier: "industrial",
+    priceRange: "$3,979.00 – $5,495.00",
+    priceNum: 3979,
+    vendors: [
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitmain-antminer-s21e-xp-hydro-bitcoin-miner/?ref=kcuwuiay", price: "$3,979.00", affiliate: true, inStock: true, notes: "Ships from USA" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitmain-antminer-s21e-xp-hydro-bitcoin-miner/", price: "$3,979.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "BT-Miners", url: "https://bt-miners.com/products/bitmain-antminer-s21-e-xp-hyd-bitcoin-miner-430th-s-bt-miners/", price: "$4,199.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Pickaxe", url: "https://www.pickaxe.io/hardware/s21e-xp-hyd-430", price: "$5,495.00", affiliate: true, inStock: true, notes: "Ships from USA" },
+    ],
+    accessories: [
+      {
+        id: "s21exphyd-pdu",
+        name: "3-Phase Mining PDU",
+        category: "power",
+        description: "High-amperage 3-phase PDU for 380–415V hydro miners.",
+        insight: "Hydro units draw 5–6 kW each at 380–415V. A metered 3-phase PDU lets you balance phases and see per-outlet draw. Have a licensed electrician size breakers and conductors.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "CMB24P 160A 3-Phase Crypto Mining PDU", price: "$499.00", url: "https://www.cryptominerbros.com/product/cmb24p-160a-3-phase-crypto-mining-pdu-380-415v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "CMB12P 100A 3-Phase P34 Crypto Mining PDU", price: "$549.00", url: "https://www.cryptominerbros.com/product/cmb12p-100a-3-phase-p34-crypto-mining-pdu/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "s21exphyd-heat",
+        name: "Dry Cooler / Heat Exchanger",
+        category: "cooling",
+        description: "Hydro miners need an external liquid loop: pump, dry cooler or plate heat exchanger, and filtration.",
+        insight: "There is no fan on a hydro miner — the loop IS the cooling. Size the dry cooler for the full heat load (≈ the miner's wattage) plus margin, and follow Bitmain's coolant flow and pressure specs.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "Plate Heat Exchanger / Dry Cooler (search)", price: "Varies", url: "https://www.amazon.com/s?k=plate+heat+exchanger+dry+cooler+hydro+miner&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "s21exphyd-coolant",
+        name: "Inhibited Coolant",
+        category: "cooling",
+        description: "Corrosion-inhibited glycol or treated water for the loop.",
+        insight: "Plain tap water corrodes cold plates and grows algae. Use inhibited coolant within the manufacturer's pH and conductivity limits.",
+        rank: 2,
+        essential: false,
+        products: [
+          { name: "Inhibited Glycol Coolant (search)", price: "Varies", url: "https://www.amazon.com/s?k=inhibited+propylene+glycol+coolant&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "s21exphyd-cable",
+        name: "C19 Power Cable",
+        category: "infrastructure",
+        description: "Replacement or spare C19 power cords.",
+        insight: "Keep a spare; damaged cords are a common cause of downtime.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: "avalon-a16",
+    name: "Avalon A16",
+    manufacturer: "Canaan",
+    algorithm: "SHA-256",
+    hashrate: "282 TH/s",
+    hashrateNum: 282,
+    power: "3,900W",
+    powerNum: 3900,
+    efficiency: "13.8 J/TH",
+    efficiencyNum: 13.8,
+    cooling: "Air",
+    voltage: "220-277V",
+    releaseYear: 2026,
+    category: "btc",
+    tier: "industrial",
+    priceRange: "$4,480.00 – $4,679.00",
+    priceNum: 4480,
+    vendors: [
+      { store: "BT-Miners", url: "https://bt-miners.com/products/canaan-avalonminer-a16-282t-bitcoin-miner-bt-miners/", price: "$4,480.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/canaan-avalon-a16-bitcoin-miner/?ref=kcuwuiay", price: "$4,679.00", affiliate: true, inStock: true, notes: "Ships from USA" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/canaan-avalon-a16-bitcoin-miner/", price: "$4,679.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+    ],
+    accessories: [
+      {
+        id: "a16-pdu",
+        name: "Mining PDU",
+        category: "power",
+        description: "Metered PDU for 220–277V Avalon miners.",
+        insight: "At ~3.9 kW per unit, a 30A 240V circuit runs one miner at 80% continuous load. Use a 3-phase PDU for multiple units.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "CMB8P 30A Metered Crypto Mining PDU 240V", price: "$149.00", url: "https://www.cryptominerbros.com/product/cmb8p-30a-metered-crypto-mining-pdu-240v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "CMB24P 160A 3-Phase Crypto Mining PDU", price: "$499.00", url: "https://www.cryptominerbros.com/product/cmb24p-160a-3-phase-crypto-mining-pdu-380-415v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "a16-fan",
+        name: "Replacement 120mm Fan",
+        category: "cooling",
+        description: "Canaan 120mm replacement fan.",
+        insight: "Fans are the most common failure part on air-cooled ASICs. Keep one spare per few units.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Canaan Avalon Fan 120mm DF1205012B2FN", price: "$12.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-120mm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "a16-cable",
+        name: "C19 Power Cable",
+        category: "infrastructure",
+        description: "Replacement C19 power cords.",
+        insight: "Use a properly rated 16A/12AWG cord; undersized cords run hot.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: "avalon-a16-xp",
+    name: "Avalon A16 XP",
+    manufacturer: "Canaan",
+    algorithm: "SHA-256",
+    hashrate: "300 TH/s",
+    hashrateNum: 300,
+    power: "3,850W",
+    powerNum: 3850,
+    efficiency: "12.8 J/TH",
+    efficiencyNum: 12.8,
+    cooling: "Air",
+    voltage: "220-277V",
+    releaseYear: 2026,
+    category: "btc",
+    tier: "industrial",
+    priceRange: "$5,950.00 – $5,999.00",
+    priceNum: 5950,
+    vendors: [
+      { store: "BT-Miners", url: "https://bt-miners.com/products/canaan-avalonminer-a16xp-300t-bitcoin-miner-bt-miners/", price: "$5,950.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/canaan-avalon-a16-xp-bitcoin-miner/?ref=kcuwuiay", price: "$5,999.00", affiliate: true, inStock: true, notes: "Ships from USA" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/canaan-avalon-a16-xp-bitcoin-miner/", price: "$5,999.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+    ],
+    accessories: [
+      {
+        id: "a16xp-pdu",
+        name: "Mining PDU",
+        category: "power",
+        description: "Metered PDU for 220–277V Avalon miners.",
+        insight: "At ~3.9 kW per unit, a 30A 240V circuit runs one miner at 80% continuous load. Use a 3-phase PDU for multiple units.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "CMB8P 30A Metered Crypto Mining PDU 240V", price: "$149.00", url: "https://www.cryptominerbros.com/product/cmb8p-30a-metered-crypto-mining-pdu-240v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "CMB24P 160A 3-Phase Crypto Mining PDU", price: "$499.00", url: "https://www.cryptominerbros.com/product/cmb24p-160a-3-phase-crypto-mining-pdu-380-415v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "a16xp-fan",
+        name: "Replacement 120mm Fan",
+        category: "cooling",
+        description: "Canaan 120mm replacement fan.",
+        insight: "Fans are the most common failure part on air-cooled ASICs. Keep one spare per few units.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Canaan Avalon Fan 120mm DF1205012B2FN", price: "$12.00", url: "https://www.cryptominerbros.com/product/canaan-avalon-fan-120mm/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "a16xp-cable",
+        name: "C19 Power Cable",
+        category: "infrastructure",
+        description: "Replacement C19 power cords.",
+        insight: "Use a properly rated 16A/12AWG cord; undersized cords run hot.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: "whatsminer-m70s-plus",
+    name: "Whatsminer M70S+",
+    manufacturer: "MicroBT",
+    algorithm: "SHA-256",
+    hashrate: "226 TH/s",
+    hashrateNum: 226,
+    power: "3,140W",
+    powerNum: 3140,
+    efficiency: "13.9 J/TH",
+    efficiencyNum: 13.9,
+    cooling: "Air",
+    voltage: "220-240V",
+    releaseYear: 2026,
+    category: "btc",
+    tier: "industrial",
+    priceRange: "$4,299.00",
+    priceNum: 4299,
+    vendors: [
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/microbt-whatsminer-m70s-plus-bitcoin-miner/?ref=kcuwuiay", price: "$4,299.00", affiliate: true, inStock: false, notes: "Specs per vendor listing; other hashrate bins exist" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/microbt-whatsminer-m70s-plus-bitcoin-miner/", price: "$4,299.00", affiliate: false, inStock: false, notes: "Specs per vendor listing" },
+    ],
+    accessories: [
+      {
+        id: "m70sp-pdu",
+        name: "Mining PDU",
+        category: "power",
+        description: "Metered 240V PDU or 3-phase PDU.",
+        insight: "Whatsminers have an integrated PSU — you just need clean 220–240V power on a dedicated circuit.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "CMB8P 30A Metered Crypto Mining PDU 240V", price: "$149.00", url: "https://www.cryptominerbros.com/product/cmb8p-30a-metered-crypto-mining-pdu-240v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "CMB24P 160A 3-Phase Crypto Mining PDU", price: "$499.00", url: "https://www.cryptominerbros.com/product/cmb24p-160a-3-phase-crypto-mining-pdu-380-415v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "m70sp-vnish",
+        name: "VNish Firmware",
+        category: "firmware",
+        description: "Third-party firmware with autotuning (check model support before installing).",
+        insight: "Check the VNish compatibility list for your exact model and control board before flashing.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "VNish Firmware", price: "Free (2.8% devfee)", url: "https://vnish.net/", store: "VNish", affiliate: false, inStock: true },
+        ],
+      },
+      {
+        id: "m70sp-cable",
+        name: "C19 Power Cable",
+        category: "infrastructure",
+        description: "Replacement C19 power cords.",
+        insight: "Use a properly rated 16A/12AWG cord.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: "sealminer-a4-pro-air",
+    name: "SealMiner A4 Pro Air",
+    manufacturer: "Bitdeer",
+    algorithm: "SHA-256",
+    hashrate: "336 TH/s",
+    hashrateNum: 336,
+    power: "3,662W",
+    powerNum: 3662,
+    efficiency: "10.9 J/TH",
+    efficiencyNum: 10.9,
+    cooling: "Air",
+    voltage: "220-277V",
+    releaseYear: 2026,
+    category: "btc",
+    tier: "industrial",
+    priceRange: "$3,999.00",
+    priceNum: 3999,
+    vendors: [
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/bitdeer-sealminer-a4-pro-air-bitcoin-miner/?ref=kcuwuiay", price: "$3,999.00", affiliate: true, inStock: false, notes: "Pre-order / out of stock" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/bitdeer-sealminer-a4-pro-air-bitcoin-miner/", price: "$3,999.00", affiliate: false, inStock: false, notes: "Pre-order / out of stock" },
+    ],
+    accessories: [
+      {
+        id: "sealA4-pdu",
+        name: "Mining PDU",
+        category: "power",
+        description: "Metered 240V PDU or 3-phase PDU.",
+        insight: "At ~3.7 kW a 30A 240V circuit carries one unit at 80% continuous load.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "CMB8P 30A Metered Crypto Mining PDU 240V", price: "$149.00", url: "https://www.cryptominerbros.com/product/cmb8p-30a-metered-crypto-mining-pdu-240v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "CMB24P 160A 3-Phase Crypto Mining PDU", price: "$499.00", url: "https://www.cryptominerbros.com/product/cmb24p-160a-3-phase-crypto-mining-pdu-380-415v/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "sealA4-cable",
+        name: "C19 Power Cable",
+        category: "infrastructure",
+        description: "Replacement C19 power cords.",
+        insight: "Use a properly rated 16A/12AWG cord.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Power Cable Cord C19, 16A 1.5m", price: "$5.00", url: "https://www.cryptominerbros.com/product/power-cable-cord-c19-16-a-replacement-power-cable/?ref=kcuwuiay", store: "Crypto Miner Bros", affiliate: true, inStock: true },
+          { name: "Heavy Duty C19 Power Cable 12AWG", price: "$15.99", url: "https://www.amazon.com/s?k=C19+power+cable+12AWG+heavy+duty&tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: "nerdaxe-gaia",
+    name: "Nerdaxe Gaia",
+    manufacturer: "Open Source (Community)",
+    algorithm: "SHA-256",
+    hashrate: "2.4 TH/s",
+    hashrateNum: 2.4,
+    power: "~25W",
+    powerNum: 25,
+    efficiency: "~10 J/TH",
+    efficiencyNum: 10,
+    cooling: "Air (Fan + Heatsink)",
+    voltage: "12V DC",
+    releaseYear: 2026,
+    category: "solo",
+    tier: "hobby",
+    priceRange: "€175.00 (EU) – $399.99",
+    priceNum: 399.99,
+    vendors: [
+      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitcoin-merch%C2%AE-nerdaxe-gaia-2-4th-s-bm1373-home-miner-w-power-supply?aff=876", price: "$399.99", affiliate: true, inStock: false, notes: "Pre-order; includes power supply" },
+      { store: "Bitronics", url: "https://bitronics.store/products/nerdaxe-gaia", price: "€175.00", affiliate: false, inStock: true, notes: "EU store; price in EUR" },
+    ],
+    accessories: [
+      {
+        id: "gaia-heatsink",
+        name: "MOSFET Heatsink Kit",
+        category: "cooling",
+        description: "Copper MOSFET heatsinks for Bitaxe/Nerdaxe boards.",
+        insight: "Keeps the voltage regulator cooler so the BM1373 can hold higher frequencies.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "52Pi Copper MOSFET Heatsink Kit for Bitaxe and Nerdaxe", price: "$11.09", url: "https://www.solosatoshi.com/aff/6679/product/52pi-copper-mosfet-heatsink-kit-for-bitaxe-and-nerdaxe/", store: "Solo Satoshi", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "gaia-paste",
+        name: "Premium Thermal Paste",
+        category: "upgrade",
+        description: "High-quality paste for repasting the ASIC.",
+        insight: "Repasting with a quality compound typically drops ASIC temperature a few degrees.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "Noctua NT-H2 Thermal Paste", price: "$14.95", url: "https://www.amazon.com/dp/B07MZ45X9G?tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+    ],
+  },
+  {
+    id: "nerdqx",
+    name: "NerdQX",
+    manufacturer: "Open Source (Community)",
+    algorithm: "SHA-256",
+    hashrate: "8 TH/s",
+    hashrateNum: 8,
+    power: "130–170W",
+    powerNum: 170,
+    efficiency: "~21 J/TH",
+    efficiencyNum: 21.25,
+    cooling: "Air (3 Fans)",
+    voltage: "12.4V DC (20A)",
+    releaseYear: 2026,
+    category: "solo",
+    tier: "hobby",
+    priceRange: "$279.00 – $449.99",
+    priceNum: 279,
+    vendors: [
+      { store: "Crypto Miner Bros", url: "https://www.cryptominerbros.com/product/nerdminer-nerdqx-bitcoin-miner/?ref=kcuwuiay", price: "$279.00", affiliate: true, inStock: true, notes: "Ships from USA" },
+      { store: "ASIC Marketplace", url: "https://asicmarketplace.com/product/nerdminer-nerdqx-bitcoin-miner/", price: "$279.00", affiliate: false, inStock: true, notes: "Ships from USA" },
+      { store: "Helium Deploy", url: "https://heliumdeploy.com/products/nerdqx-8th-s?sca_ref=10850489.OFZKz7luYd", price: "$299.99", affiliate: true, inStock: false, notes: "Out of stock" },
+      { store: "Bitcoin Merch", url: "https://bitcoinmerch.com/products/bitcoin-merch%C2%AE-nerdqx-8th-s-home-miner-w-power-supply?aff=876", price: "$449.99", affiliate: true, inStock: true, notes: "Includes power supply" },
+    ],
+    accessories: [
+      {
+        id: "nerdqx-psu",
+        name: "12V Power Supply (if not included)",
+        category: "power",
+        description: "12V supply with headroom over the ~170W peak draw.",
+        insight: "Most listings without a bundled PSU need ~12V at 20A. A Mean Well LRS-350-12 gives ample headroom; it needs wiring to the board's input connector — confirm polarity.",
+        rank: 1,
+        essential: true,
+        products: [
+          { name: "Mean Well LRS-350-12 348W 12V 29A PSU", price: "$33.99", url: "https://www.solosatoshi.com/aff/6679/product/mean-well-lrs-350-12-348w-12v-29a-switching-power-supply/", store: "Solo Satoshi", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "nerdqx-heatsink",
+        name: "MOSFET Heatsink Kit",
+        category: "cooling",
+        description: "Copper MOSFET heatsinks.",
+        insight: "Helps the regulators stay cool on multi-chip boards.",
+        rank: 1,
+        essential: false,
+        products: [
+          { name: "52Pi Copper MOSFET Heatsink Kit for Bitaxe and Nerdaxe", price: "$11.09", url: "https://www.solosatoshi.com/aff/6679/product/52pi-copper-mosfet-heatsink-kit-for-bitaxe-and-nerdaxe/", store: "Solo Satoshi", affiliate: true, inStock: true },
+        ],
+      },
+      {
+        id: "nerdqx-fan",
+        name: "Quiet 80mm Fans",
+        category: "cooling",
+        description: "Noctua 80mm fans for a quieter setup (confirm fan size on your unit).",
+        insight: "Swapping stock fans for Noctuas reduces noise; check the fan size and connector first.",
+        rank: 2,
+        essential: false,
+        products: [
+          { name: "Noctua NF-A8 PWM 80mm Fan", price: "$17.95 each", url: "https://www.amazon.com/dp/B00NEMG62M?tag=mg20080-20", store: "Amazon", affiliate: true, inStock: true },
+        ],
+      },
+    ],
+  },
 ];
 
 // Helper: get unique manufacturers
-export const manufacturers = [...new Set(miners.map(m => m.manufacturer))];
+export const manufacturers = Array.from(new Set(miners.map((m) => m.manufacturer)));
 
 // Helper: category labels
 export const categoryLabels: Record<string, string> = {
@@ -2074,123 +2660,9 @@ export const tierLabels: Record<string, string> = {
   hobby: "Hobby / Solo",
 };
 
-// Affiliate programs info for setup guide
-export const affiliatePrograms = [
-  {
-    name: "Amazon Associates",
-    commission: "1-4% on electronics/hardware",
-    cookie: "24-hour cookie window",
-    payout: "Monthly via direct deposit, check, or Amazon gift card ($10 min)",
-    signupUrl: "https://affiliate-program.amazon.com/",
-    steps: [
-      "Go to affiliate-program.amazon.com and click 'Sign Up'",
-      "Log in with your Amazon account (or create one)",
-      "Enter your website/app URL and describe your content",
-      "Choose your store ID (e.g., 'minergear-20')",
-      "Enter payment and tax information (W-9 required for US)",
-      "You'll get approved provisionally — make 3 qualifying sales within 180 days to keep the account",
-      "Generate affiliate links from the Associates dashboard for any Amazon product",
-    ],
-    notes: "Amazon has the widest product selection but lowest commissions. The 24-hour cookie means the customer must purchase within 24 hours of clicking your link. Best for accessories (fans, cables, heatsinks, thermal paste).",
-  },
-  {
-    name: "Bitcoin Merch",
-    commission: "3.3% on all products",
-    cookie: "3-day cookie window",
-    payout: "Via PayPal or store credit",
-    signupUrl: "https://bitcoinmerch.com/pages/affiliate",
-    steps: [
-      "Visit bitcoinmerch.com/pages/affiliate",
-      "Click 'Join Our Affiliate Program'",
-      "Fill out the application with your details and platform info",
-      "Once approved, access your unique referral links from the affiliate dashboard",
-      "Share links to specific products — you earn 3.3% on every sale",
-    ],
-    notes: "Bitcoin Merch carries Bitaxe miners, NerdOCTAxe, PSUs, and accessories. The 3-day cookie is better than Amazon's 24-hour window. Good commission rate for mining hardware.",
-  },
-  {
-    name: "Solo Satoshi",
-    commission: "Varies (contact for rates)",
-    cookie: "Standard tracking",
-    payout: "Contact for payout details",
-    signupUrl: "https://www.solosatoshi.com/affiliate-registration/",
-    steps: [
-      "Go to solosatoshi.com/affiliate-registration/",
-      "Complete the registration form",
-      "Describe your platform/audience and how you'll promote products",
-      "Wait for approval (typically 1-3 business days)",
-      "Access your affiliate dashboard to generate custom links",
-    ],
-    notes: "Solo Satoshi is the premier Bitaxe vendor — they build and sell Bitaxe Gamma, GT, Touch, and NerdQaxe units. High credibility with the solo mining community.",
-  },
-  {
-    name: "Power Mining",
-    commission: "Up to 10% on open-source miners",
-    cookie: "Standard tracking",
-    payout: "Commission on Bitcoin miner sales",
-    signupUrl: "https://shop.powermining.io/pages/affiliate",
-    steps: [
-      "Visit shop.powermining.io/pages/affiliate",
-      "Fill out the affiliate application",
-      "Describe your audience and promotion methods",
-      "Once approved, get your unique referral links",
-      "Earn up to 10% on every referred sale",
-    ],
-    notes: "Power Mining offers the highest commission rate (up to 10%) in the mining hardware space. They focus on open-source Bitcoin miners like the Bitaxe. Excellent for solo mining content.",
-  },
-  {
-    name: "Crypto Miner Bros",
-    commission: "Up to 1% on all products",
-    cookie: "Standard tracking",
-    payout: "Monthly commission payouts",
-    signupUrl: "https://www.cryptominerbros.com/affiliate-home/",
-    steps: [
-      "Go to cryptominerbros.com/affiliate-home/",
-      "Click 'Become an Affiliate'",
-      "Submit your application with platform details",
-      "Once approved, access your referral dashboard",
-      "Generate links for any product in their catalog",
-    ],
-    notes: "Crypto Miner Bros carries everything from Bitaxe to Antminer S23. The 1% commission is lower but they sell high-ticket items ($5,000+ miners) so the per-sale earnings can be significant.",
-  },
-  {
-    name: "Pickaxe",
-    commission: "5% (Partner) → 7.5% (Pro, $75k+) → 10% (Elite, $300k+)",
-    cookie: "30-day cookie window (last-click attribution)",
-    payout: "Net-30 via wire, ACH, or crypto ($100 minimum). Express 3-day or 24-hour payouts available after 60-day probation.",
-    signupUrl: "https://www.pickaxe.io/partners/apply",
-    steps: [
-      "Go to pickaxe.io/partners/apply",
-      "Fill out the 2-minute application with your platform details",
-      "Applications are reviewed personally within 48 hours",
-      "Once approved, get your unique referral link from your dashboard",
-      "Track clicks, orders, and commissions in real time",
-      "Self-referral allowed after 2 unique referrals",
-    ],
-    notes: "Pickaxe offers excellent tiered commissions (5-10%) on high-ticket industrial miners like Antminer S21 XP, S21 Pro, S23, L9, and L7. 30-day cookie is the best in the space. They also offer hosting services. Great for referring serious miners buying $3,000+ equipment.",
-  },
-  {
-    name: "Helium Deploy",
-    commission: "Referral commission (Social Snowball program)",
-    cookie: "Standard tracking",
-    payout: "Via referral program dashboard",
-    signupUrl: "https://heliumdeploy.com/",
-    steps: [
-      "Visit heliumdeploy.com and scroll to the footer",
-      "Look for the affiliate/referral program link or contact them directly",
-      "Sign up through their Social Snowball referral system",
-      "Get your unique referral link (format: heliumdeploy.com?sca_ref=YOURID)",
-      "Share links to specific products — your tracking code is appended automatically",
-    ],
-    notes: "Helium Deploy is a top-rated home miner reseller carrying Bitaxe, NerdQaxe++, NerdOCTAxe, Avalon Nano 3S, and bundle deals. They also offer coupon codes you can share with your audience for additional savings. Great prices on Bitaxe Gamma at $95.",
-  },
-
-];
-
-// Legal disclaimer text
 export const legalDisclaimer = {
   title: "Legal Disclaimer & Terms of Use",
-  lastUpdated: "March 2026",
+  lastUpdated: "October 2026",
   sections: [
     {
       heading: "General Disclaimer",
@@ -2214,7 +2686,7 @@ export const legalDisclaimer = {
     },
     {
       heading: "Affiliate Disclosure",
-      content: "MinerGear participates in affiliate advertising programs, including but not limited to Amazon Associates, Bitcoin Merch, Solo Satoshi, Helium Deploy, Pickaxe, Power Mining, Crypto Miner Bros, and others. When you click on certain product links and make a purchase, MinerGear may earn a small commission at no additional cost to you. These affiliate relationships do not influence our product recommendations or rankings — products are ranked by relevance, quality, and community consensus.",
+      content: "As an Amazon Associate I earn from qualifying purchases. MinerGear participates in affiliate advertising programs, including but not limited to Amazon Associates, Bitcoin Merch, Solo Satoshi, Helium Deploy, Pickaxe, Power Mining, Crypto Miner Bros, and others. When you click on certain product links and make a purchase, MinerGear may earn a small commission at no additional cost to you. These affiliate relationships do not influence our product recommendations or rankings — products are ranked by relevance, quality, and community consensus.",
     },
     {
       heading: "No Investment or Financial Advice",

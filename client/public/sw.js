@@ -1,4 +1,4 @@
-const CACHE_NAME = 'minergear-v1';
+const CACHE_NAME = 'minergear-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -31,6 +31,8 @@ self.addEventListener('activate', (event) => {
 
 // Fetch — network first, fallback to cache
 self.addEventListener('fetch', (event) => {
+  // Only cache same-origin GET requests (never POSTs or third-party APIs)
+  if (event.request.method !== 'GET' || new URL(event.request.url).origin !== self.location.origin) return;
   event.respondWith(
     fetch(event.request)
       .then((response) => {
@@ -43,8 +45,13 @@ self.addEventListener('fetch', (event) => {
         }
         return response;
       })
-      .catch(() => {
-        return caches.match(event.request);
-      })
+      .catch(() =>
+        caches.match(event.request).then(
+          (hit) =>
+            hit ||
+            (event.request.mode === 'navigate' ? caches.match('/index.html') : undefined) ||
+            Response.error()
+        ).then((res) => res || Response.error())
+      )
   );
 });
