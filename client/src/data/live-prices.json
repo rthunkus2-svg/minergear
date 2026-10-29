@@ -1,0 +1,500 @@
+{
+  "prices": {
+    "antminer-s21-xp": [
+      {
+        "vendor": "BT-Miners",
+        "price": 3100,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-s21-xp-bitcoin-miner-270th-s-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 3299,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/bitmain-antminer-s21-xp-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 3299,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitmain-antminer-s21-xp-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-s21-pro": [
+      {
+        "vendor": "BT-Miners",
+        "price": 1850,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-s21-pro-bitcoin-miner-234th-s-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 2069,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/bitmain-antminer-s21-pro-btc-miner-234th/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 2069,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitmain-antminer-s21-pro-bitcoin-miner-234th-s/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-s21-plus": [
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 1449,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/bitmain-antminer-s21-plus-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 1449,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitmain-antminer-s21-plus-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "BT-Miners",
+        "price": 1538,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-s21-plus-bitcoin-miner-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-s21": [
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 949,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitmain-antminer-s21-bitcoin-asic-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "BT-Miners",
+        "price": 1070,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-s21-bitcoin-miner-200th-s-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-s23": [
+      {
+        "vendor": "BT-Miners",
+        "price": 8268,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-s23-bitcoin-miner-318th-s-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 8349,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/bitmain-antminer-s23-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-t21": [
+      {
+        "vendor": "BT-Miners",
+        "price": 950,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-t21-190th-s-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "avalon-q": [
+      {
+        "vendor": "Solo Satoshi",
+        "price": 1349,
+        "inStock": true,
+        "url": "https://www.solosatoshi.com/aff/6679/product/canaan-avalon-q-90th-bitcoin-home-miner/",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 1499,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/canaan-avalon-q-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 1499,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/canaan-avalon-q-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "avalon-nano-3s": [
+      {
+        "vendor": "Solo Satoshi",
+        "price": 219,
+        "inStock": true,
+        "url": "https://www.solosatoshi.com/aff/6679/product/avalon-nano-3s-bitcoin-solo-miner/",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Helium Deploy",
+        "price": 250,
+        "inStock": false,
+        "url": "https://heliumdeploy.com/products/avalon-nano-3s?sca_ref=10850489.OFZKz7luYd",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "whatsminer-m60s": [
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 1799,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/microbt-whatsminer-m60s-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "BT-Miners",
+        "price": 3600,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/whatsminer-m60s-bitcoin-miner-186th-s/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "whatsminer-m50s": [
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 759,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/microbt-whatsminer-m50s-126th-s-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "BT-Miners",
+        "price": 800,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/whatsminer-m50s-126th-s-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "bitaxe-gamma": [
+      {
+        "vendor": "Solo Satoshi",
+        "price": 61,
+        "inStock": true,
+        "url": "https://www.solosatoshi.com/aff/6679/product/bitaxe-gamma/",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 89,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/bitaxe-gamma-602-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 89,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitaxe-gamma-602-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Bitcoin Merch",
+        "price": 119.99,
+        "inStock": true,
+        "url": "https://bitcoinmerch.com/products/bitcoin-merch-bitaxe-601-gamma-power-supply-bitcoin-miner-1-5th-s?aff=876",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "nerdqaxepp": [
+      {
+        "vendor": "Helium Deploy",
+        "price": 249,
+        "inStock": false,
+        "url": "https://heliumdeploy.com/products/nerdqaxe-rev-6-1-6th-s-new?sca_ref=10850489.OFZKz7luYd",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Bitcoin Merch",
+        "price": 259.99,
+        "inStock": true,
+        "url": "https://bitcoinmerch.com/products/nerdqaxe-plus-plus?aff=876",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "nerdoctaxe": [
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 399,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/nerdminer-nerdoctaxe-rev-3-1-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-l9": [
+      {
+        "vendor": "BT-Miners",
+        "price": 2350,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-l9-litecoin-dogecoin-miner-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 2699,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitmain-antminer-l9-dogecoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-l7": [
+      {
+        "vendor": "BT-Miners",
+        "price": 680,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-l7-litecoin-dogecoin-miner-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 749,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitmain-antminer-l7-9-16gh-s/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-s23-hyd": [
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 13389,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitmain-antminer-s23-hydro-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 13389,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/bitmain-antminer-s23-hydro-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "BT-Miners",
+        "price": 15800,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-s23-hyd-bitcoin-miner-580th-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-s23-xp-hyd": [
+      {
+        "vendor": "BT-Miners",
+        "price": 15300,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-s23-xp-hyd-bitcoin-miner-600th/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 16499,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitmain-antminer-s23-xp-hydro-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 16499,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/bitmain-antminer-s23-xp-hydro-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "antminer-s21e-xp-hyd": [
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 3979,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/bitmain-antminer-s21e-xp-hydro-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 3979,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/bitmain-antminer-s21e-xp-hydro-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "BT-Miners",
+        "price": 4199,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/bitmain-antminer-s21-e-xp-hyd-bitcoin-miner-430th-s-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "avalon-a16": [
+      {
+        "vendor": "BT-Miners",
+        "price": 4480,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/canaan-avalonminer-a16-282t-bitcoin-miner-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 4679,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/canaan-avalon-a16-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 4679,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/canaan-avalon-a16-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "avalon-a16-xp": [
+      {
+        "vendor": "BT-Miners",
+        "price": 5950,
+        "inStock": true,
+        "url": "https://bt-miners.com/products/canaan-avalonminer-a16xp-300t-bitcoin-miner-bt-miners/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 5999,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/canaan-avalon-a16-xp-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 5999,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/canaan-avalon-a16-xp-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "whatsminer-m70s-plus": [
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 4299,
+        "inStock": false,
+        "url": "https://www.cryptominerbros.com/product/microbt-whatsminer-m70s-plus-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 4299,
+        "inStock": false,
+        "url": "https://asicmarketplace.com/product/microbt-whatsminer-m70s-plus-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "sealminer-a4-pro-air": [
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 3999,
+        "inStock": false,
+        "url": "https://www.cryptominerbros.com/product/bitdeer-sealminer-a4-pro-air-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 3999,
+        "inStock": false,
+        "url": "https://asicmarketplace.com/product/bitdeer-sealminer-a4-pro-air-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ],
+    "nerdqx": [
+      {
+        "vendor": "Crypto Miner Bros",
+        "price": 279,
+        "inStock": true,
+        "url": "https://www.cryptominerbros.com/product/nerdminer-nerdqx-bitcoin-miner/?ref=kcuwuiay",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "ASIC Marketplace",
+        "price": 279,
+        "inStock": true,
+        "url": "https://asicmarketplace.com/product/nerdminer-nerdqx-bitcoin-miner/",
+        "affiliate": false,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      },
+      {
+        "vendor": "Bitcoin Merch",
+        "price": 449.99,
+        "inStock": true,
+        "url": "https://bitcoinmerch.com/products/bitcoin-merch%C2%AE-nerdqx-8th-s-home-miner-w-power-supply?aff=876",
+        "affiliate": true,
+        "lastUpdated": "2026-10-29T17:51:54.234Z"
+      }
+    ]
+  },
+  "stale": false,
+  "lastUpdated": "2026-10-29T17:51:54.234Z"
+}
