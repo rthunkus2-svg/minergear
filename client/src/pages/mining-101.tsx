@@ -357,19 +357,59 @@ export default function Mining101() {
             </div>
             <HighlightBox>
               <p className="font-medium text-foreground">
-                Real talk: A Bitaxe Gamma costs under $100 and uses about 15 watts — less than a light
+                Real talk: A Bitaxe Gamma costs under $100 and uses about 20 watts — less than a light
                 bulb. You won't get rich from it, but you're in the game. Solo miners with small
                 devices have hit full blocks worth tens of thousands of dollars. It happens.
               </p>
             </HighlightBox>
             <p>
-              For more serious setups, industrial ASIC miners like the Antminer S21 Pro can generate
+              For more serious setups, current-generation industrial ASICs like the Antminer S23 or Whatsminer M70S can generate
               meaningful daily revenue depending on your electricity rate. Many home miners in areas
               with cheap power are running profitable operations from their garage or basement.
             </p>
           </SectionCard>
 
           {/* Getting Started */}
+          <SectionCard icon={TrendingUp} title="Efficiency: The Spec That Matters Most">
+            <p>
+              Efficiency is measured in <strong className="text-foreground">joules per terahash (J/TH)</strong> for Bitcoin miners
+              (Scrypt miners for Litecoin and Dogecoin use J/MH). It tells you how much electricity a miner burns for each unit of
+              hashing work. Lower is better, and because electricity is the biggest ongoing cost of mining, efficiency matters more
+              than raw hashrate or sticker price.
+            </p>
+            <p>
+              The math is simple: power (watts) = hashrate (TH/s) × efficiency (J/TH). 100 TH/s at 9 J/TH draws about 900 W;
+              the same 100 TH/s at 19 J/TH draws about 1,900 W — more than double the power bill for identical output.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3 pt-2">
+              <div className="p-3 rounded-lg bg-muted/50">
+                <p className="font-semibold text-foreground text-sm">~9–11 J/TH: 2026 flagships</p>
+                <p className="text-xs mt-1">
+                  Hydro-cooled farm units like the Antminer S23 XP Hyd (8.9 J/TH) and SealMiner A4 Ultra Hydro (9.45 J/TH), plus
+                  the Bitaxe Naja Duo (about 9.5 J/TH) at the hobby end.
+                </p>
+              </div>
+              <div className="p-3 rounded-lg bg-muted/50">
+                <p className="font-semibold text-foreground text-sm">~11–14 J/TH: current air-cooled</p>
+                <p className="text-xs mt-1">
+                  Air-cooled ASICs like the SealMiner A4 Pro Air, Antminer S23, Whatsminer M70S/M70S+ and Avalon A16 — no liquid loop needed.
+                </p>
+              </div>
+              <div className="p-3 rounded-lg bg-muted/50">
+                <p className="font-semibold text-foreground text-sm">17+ J/TH: previous generations</p>
+                <p className="text-xs mt-1">
+                  Models like the Antminer S21/T21 and Whatsminer M60S/M50S. We list them as legacy: fine if you already own one,
+                  but a poor buy new.
+                </p>
+              </div>
+            </div>
+            <p>
+              Quiet home miners and space heaters trade some efficiency for low noise and 120V power, and that's okay — their
+              heat warms your room. Sort the{" "}
+              <Link href="/" className="text-primary underline">miner list</Link> by "Efficiency: Best First" to compare.
+            </p>
+          </SectionCard>
+
           <SectionCard icon={Cpu} title="Getting Started">
             <p>
               Ready to start mining? Here's what you need:
@@ -382,8 +422,8 @@ export default function Mining101() {
                 <div>
                   <p className="font-medium text-foreground text-sm">A Miner</p>
                   <p className="text-xs">
-                    From a $77 Bitaxe for hobby solo mining to a $5,000+ Antminer S21 Pro for serious
-                    hashpower. Pick based on your budget, noise tolerance, and power availability.
+                    From a sub-$100 Bitaxe Gamma for hobby solo mining to an $8,000+ Antminer S23 for serious
+                    hashpower. Pick based on your budget, noise tolerance, power availability — and efficiency (see above).
                   </p>
                 </div>
               </div>

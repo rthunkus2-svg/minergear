@@ -48,6 +48,18 @@ for (const m of miners) {
 check(ids.has("antminer-l7") && miners.find((m) => m.id === "antminer-l7")!.legacy, "antminer-l7 must be legacy");
 check(ids.has("whatsminer-m50s") && miners.find((m) => m.id === "whatsminer-m50s")!.legacy, "whatsminer-m50s must be legacy");
 for (const id of ["antminer-s23-hyd", "avalon-a16", "whatsminer-m70s-plus", "nerdqx"]) check(ids.has(id), `2026 model ${id} missing`);
+for (const id of ["sealminer-a4-ultra-hydro", "sealminer-a4-pro-hydro", "antminer-s23e-u2h", "whatsminer-m73s", "whatsminer-m70s", "antminer-l11", "bitaxe-naja-duo"])
+  check(ids.has(id), `Nov 2026 model ${id} missing`);
+for (const id of ["antminer-t21", "antminer-s21", "whatsminer-m60s", "avalon-a1566i"])
+  check(miners.find((m) => m.id === id)?.legacy, `${id} must be legacy`);
+for (const m of miners) {
+  if (m.supersededBy) {
+    const s = miners.find((x) => x.id === m.supersededBy);
+    check(s && !s.legacy, `${m.id} supersededBy ${m.supersededBy} must be a current model`);
+  }
+  // SHA-256 miners above ~30 J/TH are obsolete and must not be presented as current
+  if (m.algorithm === "SHA-256" && m.tier === "industrial" && m.efficiencyNum > 30) check(m.legacy, `${m.id} is above 30 J/TH but not legacy`);
+}
 
 for (const l of allLinks) {
   let u: URL;
