@@ -33,4 +33,12 @@ export const minerImages: Record<string, string> = {
   "nerdaxe-gaia": "/miners/nerdaxe-gaia.webp",
   "nerdqx": "/miners/nerdqx.webp",
   "whatsminer-m70s-plus": "/miners/whatsminer-m70s-plus.webp",
+  // November 2026 revamp — retailer product-listing photos (sources: docs/image-sources-2026-11.md)
+  "sealminer-a4-ultra-hydro": "/miners/sealminer-a4-ultra-hydro.webp",
+  "sealminer-a4-pro-hydro": "/miners/sealminer-a4-pro-hydro.webp",
+  "antminer-s23e-u2h": "/miners/antminer-s23e-u2h.webp",
+  "whatsminer-m73s": "/miners/whatsminer-m73s.webp",
+  "whatsminer-m70s": "/miners/whatsminer-m70s.webp",
+  "antminer-l11": "/miners/antminer-l11.webp",
+  "bitaxe-naja-duo": "/miners/bitaxe-naja-duo.webp",
 };

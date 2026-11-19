@@ -25,9 +25,9 @@ export const organizationJsonLd = {
 
 export const homeMeta: PageMeta = {
   path: "/",
-  title: "MinerGear — ASIC Miner Prices, Specs & Accessories Guide (2026)",
+  title: "Most Efficient Bitcoin Miners 2026 — ASIC Prices, Specs & Accessories | MinerGear",
   description:
-    "Compare 2026 ASIC and home Bitcoin miners — Antminer S23, Avalon A16, Whatsminer, Bitaxe and more — with vendor prices, specs, and the power supplies, cooling and accessories each one needs.",
+    "Compare the newest ASIC and home Bitcoin miners by efficiency (J/TH): Antminer S23 XP Hyd, SealMiner A4, Whatsminer M70S, Bitaxe Naja Duo and more, with vendor prices and the accessories each one needs. Updated November 2026.",
 };
 
 export const learnMeta: PageMeta = {
@@ -62,6 +62,7 @@ export function minerMeta(miner: Miner, imagePath?: string): PageMeta {
   const title = `${miner.name}${legacy} — Price, Specs & Accessories | MinerGear`;
   const description =
     `${miner.name} by ${miner.manufacturer}: ${miner.hashrate}, ${miner.power}, ${miner.efficiency}. ` +
+    (miner.legacy ? "Legacy model, superseded by newer, more efficient miners. " : "") +
     `Compare prices from ${miner.vendors.length} vendor${miner.vendors.length === 1 ? "" : "s"} (${miner.priceRange}) ` +
     `and see ${miner.accessories.length} recommended accessories.`;
   const image = imagePath ? `${SITE_URL}${imagePath.startsWith("/") ? "" : "/"}${imagePath}` : undefined;

@@ -348,6 +348,7 @@ export default function MinerDetail() {
     .filter((g) => g.items.length > 0);
 
   const essentialCount = miner.accessories.filter((a) => a.essential).length;
+  const successor = miner.supersededBy ? miners.find((m) => m.id === miner.supersededBy) : undefined;
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -415,6 +416,27 @@ export default function MinerDetail() {
                   <StatCard icon={Plug} label="Voltage" value={miner.voltage} />
                   <StatCard icon={Calendar} label="Released" value={String(miner.releaseYear)} />
                 </div>
+
+                {miner.legacy && (
+                  <div
+                    className="mt-5 rounded-lg border border-amber-500/40 bg-amber-500/5 p-4 text-sm"
+                    data-testid="note-legacy"
+                  >
+                    <p className="font-semibold text-amber-700 dark:text-amber-400">Legacy model — not recommended for new purchases</p>
+                    <p className="text-muted-foreground mt-1">
+                      Newer miners use much less power for the same hashrate. This page stays up for current owners who need parts and accessories.
+                      {successor && (
+                        <>
+                          {" "}Looking to buy? See the{" "}
+                          <Link href={`/miner/${successor.id}`} className="font-medium text-foreground underline hover:text-primary">
+                            {successor.name}
+                          </Link>{" "}
+                          ({successor.efficiency}).
+                        </>
+                      )}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
